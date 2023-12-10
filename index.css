@@ -366,15 +366,12 @@ table{
 }
 
 .newpostfunction{
-    text-align: left;
-}
-
-.newpostfunction2{
     text-align: right;
 }
 
 .newposteditordiv{
     height: 30vh;
+    text-align: left;
 }
 
 .newposteditor{
