@@ -2,6 +2,7 @@ let cover
 
 InlineEditor.create(docgetid("newposteditor"),{
     // plugins:[CKFinder],
+    extraPlugins: [ MyCustomUploadAdapterPlugin ],
     // https://ckeditor.com/docs/ckeditor5/latest/features/toolbar/toolbar.html#extended-toolbar-configuration-format
     toolbar: {
         items: ["selectAll","undo","redo","bold","italic","blockQuote","heading","imageTextAlternative","toggleImageCaption","imageStyle:inline","imageStyle:alignLeft","imageStyle:alignRight","imageStyle:alignCenter","imageStyle:alignBlockLeft","imageStyle:alignBlockRight","imageStyle:block","imageStyle:side","imageStyle:wrapText","imageStyle:breakText","uploadImage","imageUpload","indent","outdent","link","numberedList","bulletedList","mediaEmbed","insertTable","tableColumn","tableRow","mergeTableCells"],
@@ -77,10 +78,7 @@ InlineEditor.create(docgetid("newposteditor"),{
             {
                 marker: "@",
                 feed: [
-                    "@apple","@bears","@brownie","@cake","@cake","@candy","@canes","@chocolate","@cookie","@cotton","@cream",
-                    "@cupcake","@danish","@donut","@dragée","@fruitcake","@gingerbread","@gummi","@ice","@jelly-o",
-                    "@liquorice","@macaroon","@marzipan","@oat","@pie","@plum","@pudding","@sesame","@snaps","@soufflé",
-                    "@sugar","@sweet","@topping","@wafer"
+                    "@apple","@bears","@brownie","@cake","@cake","@candy","@canes","@chocolate","@cookie","@cotton","@cream","@cupcake","@danish","@donut","@dragée","@fruitcake","@gingerbread","@gummi","@ice","@jelly-o","@liquorice","@macaroon","@marzipan","@oat","@pie","@plum","@pudding","@sesame","@snaps","@soufflé","@sugar","@sweet","@topping","@wafer"
                 ],
                 minimumCharacters: 1
             }
