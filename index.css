@@ -361,6 +361,7 @@ table{
 
 .webknowledgemaindiv{
     position: relative;
+    height: 85vh;
     text-align: right;
     padding: 5px 10px;
     margin-top: 100px;
@@ -433,6 +434,7 @@ table{
     text-align: center;
     margin-top: 20px;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .webknowledgepost{
@@ -441,7 +443,7 @@ table{
     width: 20vw;
     height: 35vh;
     padding: 5px;
-    margin: 0px 20px;
+    margin: 1% 1.5%;
     cursor: pointer;
 }
 
@@ -479,4 +481,82 @@ table{
 
 .postfile{
     display: none;
+}
+
+.webknowledgefunction{
+    position: sticky;
+    text-align: right;
+}
+
+/* product START */
+.productmaindiv{
+    position: relative;
+    top: 100px;
+    height: 85vh;
+}
+
+.productpostdiv{
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.productfunction{
+    position: relative;
+}
+
+.productpost{
+    border: 2px white solid;
+    border-radius: 5px;
+    width: 20vw;
+    height: 35vh;
+    padding: 5px;
+    margin: 1% 1.5%;
+    cursor: pointer;
+}
+
+.productpostimagediv{
+    grid-column: 1/100;
+    grid-row: 1/9;
+}
+
+.productpostimage{
+    max-height: 100%;
+}
+
+.productposttitle{
+    grid-column: 1/100;
+    grid-row: 9/13;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.productpostcontent{
+    grid-column: 1/100;
+    grid-row: 13/17;
+    font-size: 15px;
+}
+
+.productselect{
+    width: 60%;
+    font-size: 20px;
+    text-align: center;
+}
+
+.newproductbutton{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+/* product END */
+
+.error{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: red;
+    font-size: 75px;
+    font-weight: bold;
 }

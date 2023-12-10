@@ -23,10 +23,6 @@ ajax("GET","/backend/project005/getpostlist/",function(event){
     }
 })
 
-docgetid("newpost").onclick=function(){
-    location.href="newpost.html"
-}
-
 docgetid("title").onclick=function(){
     location.href="index.html"
 }

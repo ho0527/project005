@@ -17,13 +17,12 @@ signin(
     navbar=`
         <div class="navigationbar" id="navigationbar">
             <div class="navigationbarleft" id="title">
-                <img src="/website/material/icon/mainicon.png" class="logo">
-                <div class="maintitle">貝爾網站</div>
+            <img src="material/icon/logo.png" class="logo">
             </div>
             <div class="navigationbarright">
                 <input type="button" class="navigationbarbutton" value="公司簡介">
                 <input type="button" class="navigationbarbutton" value="服務說明">
-                <input type="button" class="navigationbarbutton" value="作品實績">
+                <input type="button" class="navigationbarbutton" onclick="location.href='product.html'" value="作品實績">
                 <input type="button" class="navigationbarbutton" onclick="location.href='webknowledge.html'" value="網站知識">
                 <input type="button" class="navigationbarbutton" value="聯絡我們">
                 <input type="button" class="navigationbarbutton navigationbarselect" onclick="location.href='signin.html'" value="登入後台">
