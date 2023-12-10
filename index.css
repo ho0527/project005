@@ -360,6 +360,7 @@ table{
 /* program START */
 
 .webknowledgemaindiv{
+    position: relative;
     text-align: right;
     padding: 5px 10px;
     margin-top: 100px;
@@ -367,20 +368,65 @@ table{
 
 .newpostfunction{
     text-align: right;
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    width: calc(100% - 20px);
 }
 
 .newposteditordiv{
-    height: 30vh;
+    font-size: 25px;
     text-align: left;
+    cursor: text;
 }
 
 .newposteditor{
-    border: 2px white solid !important;
+    height: 35vh;
+}
+
+.uploadfilediv{
+    position: relative;
+    height: 20vh;
+    cursor: pointer;
+}
+
+.imagepreviewdiv{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.imagepreview{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 100%;
     max-height: 100%;
 }
 
+.uploadfile{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 900;
+}
+
 .newpostmain{
-    width: 75vw;
+    border: 2px white solid !important;
+    height: 80%;
+}
+
+.newpostmaindiv{
+    width: 50vw;
+    height: 70vh;
 }
 
 .webknowledgepostdiv{
@@ -428,4 +474,8 @@ table{
     text-align: right;
     padding: 5px 10px;
     margin-top: 100px;
+}
+
+.postfile{
+    display: none;
 }

@@ -1,9 +1,10 @@
 let cover
 
 InlineEditor.create(docgetid("newposteditor"),{
+    // plugins:[CKFinder],
     // https://ckeditor.com/docs/ckeditor5/latest/features/toolbar/toolbar.html#extended-toolbar-configuration-format
     toolbar: {
-        items: ["exportPDF","exportWord","|","findAndReplace","selectAll","|","heading","|","bold","italic","strikethrough","underline","code","subscript","superscript","removeFormat","|","bulletedList","numberedList","todoList","|","outdent","indent","|","undo","redo","fontSize","fontFamily","fontColor","fontBackgroundColor","highlight","|","alignment","|","link","insertImage","blockQuote","insertTable","mediaEmbed","codeBlock","htmlEmbed","|","specialCharacters","horizontalLine","pageBreak","|","textPartLanguage","|","sourceEditing"],
+        items: ["selectAll","undo","redo","bold","italic","blockQuote","heading","imageTextAlternative","toggleImageCaption","imageStyle:inline","imageStyle:alignLeft","imageStyle:alignRight","imageStyle:alignCenter","imageStyle:alignBlockLeft","imageStyle:alignBlockRight","imageStyle:block","imageStyle:side","imageStyle:wrapText","imageStyle:breakText","uploadImage","imageUpload","indent","outdent","link","numberedList","bulletedList","mediaEmbed","insertTable","tableColumn","tableRow","mergeTableCells"],
         shouldNotGroupWhenFull: true
     },
     // Changing the language of the interface requires loading the language file using the <script> tag.
@@ -85,43 +86,29 @@ InlineEditor.create(docgetid("newposteditor"),{
             }
         ]
     },
-    // The "super-build" contains more premium features that require additional configuration,disable them below.
-    // Do not turn them on unless you read the documentation and know how to configure them and setup the editor.
-    removePlugins: [
-        // These two are commercial,but you can try them out without registering to a trial.
-        // "ExportPdf",
-        // "ExportWord",
-        "AIAssistant",
-        "CKBox",
-        "CKFinder",
-        "EasyImage",
-        // This sample uses the Base64UploadAdapter to handle image uploads as it requires no configuration.
-        // https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/base64-upload-adapter.html
-        // Storing images as Base64 is usually a very bad idea.
-        // Replace it on production website with other solutions:
-        // https://ckeditor.com/docs/ckeditor5/latest/features/images/image-upload/image-upload.html
-        // "Base64UploadAdapter",
-        "RealTimeCollaborativeComments",
-        "RealTimeCollaborativeTrackChanges",
-        "RealTimeCollaborativeRevisionHistory",
-        "PresenceList",
-        "Comments",
-        "TrackChanges",
-        "TrackChangesData",
-        "RevisionHistory",
-        "Pagination",
-        "WProofreader",
-        // Careful,with the Mathtype plugin CKEditor will not load when loading this sample
-        // from a local file system (file://) - load this site via HTTP server if you enable MathType.
-        "MathType",
-        // The following features are part of the Productivity Pack and require additional license.
-        "SlashCommand",
-        "Template",
-        "DocumentOutline",
-        "FormatPainter",
-        "TableOfContents",
-        "PasteFromOfficeEnhanced"
-    ]
+    // removePlugins: [
+    //     "AIAssistant",
+    //     "CKBox",
+    //     "CKFinder",
+    //     "EasyImage",
+    //     "RealTimeCollaborativeComments",
+    //     "RealTimeCollaborativeTrackChanges",
+    //     "RealTimeCollaborativeRevisionHistory",
+    //     "PresenceList",
+    //     "Comments",
+    //     "TrackChanges",
+    //     "TrackChangesData",
+    //     "RevisionHistory",
+    //     "Pagination",
+    //     "WProofreader",
+    //     "MathType",
+    //     "SlashCommand",
+    //     "Template",
+    //     "DocumentOutline",
+    //     "FormatPainter",
+    //     "TableOfContents",
+    //     "PasteFromOfficeEnhanced"
+    // ]
 }).then(function(event){
     docgetid("submit").onclick=function(){
         if(cover&&title!=""){
@@ -144,11 +131,56 @@ InlineEditor.create(docgetid("newposteditor"),{
 })
 
 docgetid("file").onchange=function(){
-    cover=this.files[0]
+    let file=this.files[0]
+    cover=file
+    let reader=new FileReader()
+    reader.onload=function(e){
+        docgetid("preview").src=e.target.result
+        docgetid("preview").style.display="block"
+    }
+    reader.readAsDataURL(file)
 }
 
 docgetid("title").onclick=function(){
     location.href="index.html"
+}
+
+docgetid("uploadfile").onclick=function(){
+    docgetid("file").click()
+}
+
+docgetid("uploadfile").ondragover=function(event){
+    event.preventDefault()
+    event.stopPropagation()
+}
+
+docgetid("uploadfile").ondragleave=function(event){
+    event.preventDefault()
+    event.stopPropagation()
+}
+
+docgetid("uploadfile").ondrop=function(event){
+    event.preventDefault()
+    event.stopPropagation()
+
+    let files=event.dataTransfer.files
+    if(files.length>0){
+        let file=files[0]
+        cover=file
+
+        let reader=new FileReader()
+        reader.onload=function(e){
+            docgetid("preview").src=e.target.result
+            docgetid("preview").style.display="block"
+        }
+        reader.readAsDataURL(file)
+    }
+}
+
+
+docgetid("newposteditor").ondrop=function(){
+    cover=this.files[0]
+    console.log("cover=",cover)
 }
 
 startmacossection()
