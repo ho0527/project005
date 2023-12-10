@@ -546,8 +546,13 @@ table{
 
 .newproductbutton{
     position: absolute;
-    top: 5px;
+    top: 1px;
     right: 5px;
+}
+
+.newproductbutton:active{
+    position: absolute;
+    top: 2px;
 }
 /* product END */
 

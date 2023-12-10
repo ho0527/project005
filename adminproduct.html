@@ -16,11 +16,24 @@
             <div class="navigationbarright">
                 <input type="button" class="navigationbarbutton" value="公司簡介">
                 <input type="button" class="navigationbarbutton" value="服務說明">
-                <input type="button" class="navigationbarbutton" onclick="location.href='adminproduct.html'" value="作品實績">
+                <input type="button" class="navigationbarbutton navigationbarselect" onclick="location.reload()" value="作品實績">
                 <input type="button" class="navigationbarbutton" onclick="location.href='adminwebknowledge.html'" value="網站知識">
                 <input type="button" class="navigationbarbutton" value="聯絡我們">
                 <input type="button" class="navigationbarbutton" id="logout" value="登出">
             </div>
         </div>
+        <div class="productmaindiv">
+            <div class="productfunction">
+                <div class="div">
+                    <input type="button" class="button" data-id="all" value="全部">
+                    <input type="button" class="button" data-id="system" value="系統整合">
+                    <input type="button" class="button" data-id="commercializeapp" value="商業化軟體">
+                    <input type="button" class="button" data-id="personalizeapp" value="個人化軟體">
+                </div>
+                <input type="button" class="button newproductbutton" id="newproduct" value="新增貼文">
+            </div>
+            <div class="productpostdiv macossectiondivy" id="post"></div>
+        </div>
+        <script src="product.js"></script>
     </body>
 </html>
