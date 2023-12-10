@@ -114,7 +114,7 @@ InlineEditor.create(docgetid("newposteditor"),{
                 let data=JSON.parse(event.responseText)
                 if(data["success"]){
                     alert("上傳成功")
-                    location.href="webknowledge.html"
+                    location.href="adminwebknowledge.html"
                 }
             },formdata([
                 ["cover",cover],
@@ -179,6 +179,21 @@ docgetid("uploadfile").ondrop=function(event){
 docgetid("newposteditor").ondrop=function(){
     cover=this.files[0]
     console.log("cover=",cover)
+}
+
+docgetid("signout").onclick=function(){
+    ajax("POST","/backend/project005/signout/",function(event){
+        let data=JSON.parse(event.responseText)
+        if(data["success"]){
+            alert("登出成功")
+            weblsset("project005token",null)
+            location.href="index.html"
+        }else{
+            alert(data["data"])
+        }
+    },null,[
+        ["Authorization","Bearer "+weblsget("project005token")]
+    ])
 }
 
 startmacossection()

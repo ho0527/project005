@@ -31,7 +31,7 @@ docgetid("title").onclick=function(){
     location.href="index.html"
 }
 
-docgetid("logout").onclick=function(){
+docgetid("signout").onclick=function(){
     ajax("POST","/backend/project005/signout/",function(event){
         let data=JSON.parse(event.responseText)
         if(data["success"]){

@@ -48,6 +48,10 @@ signin(
     footer=``
 )
 
+docgetid("title").onclick=function(){
+    location.href="index.html"
+}
+
 docgetid("signup").onclick=function(){
     ajax("POST","/backend/project005/signup/",function(event){
         let data=JSON.parse(event.responseText)
@@ -64,8 +68,10 @@ docgetid("signup").onclick=function(){
     }))
 }
 
-docgetid("title").onclick=function(){
-    location.href="index.html"
+document.onkeydown=function(event){
+    if(event.key=="Enter"&&!event.shiftKey){
+        docgetid("submit").click()
+    }
 }
 
 startmacossection()
