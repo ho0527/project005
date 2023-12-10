@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="/website/plugin/css/chrisplugin.css">
+        <script src="/website/plugin/js/chrisplugin.js"></script>
+        <!-- <script src="https://cdn.ckeditor.com/ckeditor5/40.1.0/classic/ckeditor.js"></script> -->
+        <!-- <script src="https://cdn.ckeditor.com/ckeditor5/40.1.0/decoupled-document/ckeditor.js"></script> -->
+        <script src="https://cdn.ckeditor.com/ckeditor5/40.1.0/inline/ckeditor.js"></script>
+    </head>
+    <body>
+        <div class="navigationbar" id="navigationbar">
+            <div class="navigationbarleft" id="title">
+                <img src="/website/material/icon/mainicon.png" class="logo">
+                <div class="maintitle">貝爾網站</div>
+            </div>
+            <div class="navigationbarright">
+                <input type="button" class="navigationbarbutton" value="公司簡介">
+                <input type="button" class="navigationbarbutton" value="服務說明">
+                <input type="button" class="navigationbarbutton" value="作品實績">
+                <input type="button" class="navigationbarbutton" onclick="location.href='webknowledge.html'" value="網站知識">
+                <input type="button" class="navigationbarbutton" value="聯絡我們">
+            </div>
+        </div>
+        <div class="newpostmain main">
+            標題: <input type="text" class="input" id="posttitle"><br><br>
+            <div class="newposteditordiv">
+                <div class="newposteditor macossectiondivy" id="newposteditor"></div>
+            </div>
+            <div class="newpostfunction">
+                <input type="file" id="file" accept="image/*">
+            </div>
+            <div class="newpostfunction2">
+                <input type="button" class="button" id="submit" value="送出">
+            </div>
+        </div>
+        <script src="newpost.js"></script>
+    </body>
+</html>

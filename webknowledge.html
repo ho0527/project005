@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="/website/plugin/css/chrisplugin.css">
+        <script src="/website/plugin/js/chrisplugin.js"></script>
+    </head>
+    <body>
+        <div class="navigationbar" id="navigationbar">
+            <div class="navigationbarleft" id="title">
+                <img src="/website/material/icon/mainicon.png" class="logo">
+                <div class="maintitle">貝爾網站</div>
+            </div>
+            <div class="navigationbarright">
+                <input type="button" class="navigationbarbutton" value="公司簡介">
+                <input type="button" class="navigationbarbutton" value="服務說明">
+                <input type="button" class="navigationbarbutton" value="作品實績">
+                <input type="button" class="navigationbarbutton navigationbarselect" onclick="location.reload()" value="網站知識">
+                <input type="button" class="navigationbarbutton" value="聯絡我們">
+            </div>
+        </div>
+        <div class="webknowledgemaindiv">
+            <div class="webknowledgefunction">
+                <input type="button" class="button" id="newpost" value="新增貼文">
+            </div>
+            <div class="webknowledgepostdiv" id="post"></div>
+        </div>
+        <script src="webknowledge.js"></script>
+    </body>
+</html>
