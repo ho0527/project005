@@ -513,6 +513,23 @@ table{
 
 .productfunction{
     position: relative;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productbutton{
+    border: 1px black solid;
+    background: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.productbuttonselect{
+    background: rgb(5, 136, 250);
+    color: white;
 }
 
 .productpost{
