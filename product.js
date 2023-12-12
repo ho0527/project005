@@ -42,10 +42,6 @@ docgetall(".productbutton").forEach(function(event){
     }
 })
 
-docgetid("newproduct").onclick=function(){
-    location.href="newproduct.html"
-}
-
 docgetid("title").onclick=function(){
     location.href="index.html"
 }
