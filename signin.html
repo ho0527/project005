@@ -1,15 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html class="light">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="plugin/css/tocas.css">
         <link rel="stylesheet" href="/website/plugin/css/chrisplugin.css">
         <script src="/website/plugin/js/chrisplugin.js"></script>
         <script src="https://cdn.ckeditor.com/ckeditor5/16.0.0/classic/ckeditor.js"></script>
     </head>
     <body>
+        <div class="navigationbar" id="navigationbar">
+            <div class="navigationbarleft" id="title">
+            <img src="material/icon/logo.png" class="logo">
+            </div>
+            <div class="navigationbarright">
+                <input type="button" class="navigationbarbutton" value="公司簡介">
+                <input type="button" class="navigationbarbutton" value="服務說明">
+                <input type="button" class="navigationbarbutton" onclick="location.href='product.html'" value="解決方案">
+                <input type="button" class="navigationbarbutton" onclick="location.href='webknowledge.html'" value="網站知識">
+                <input type="button" class="navigationbarbutton" value="聯絡我們">
+                <input type="button" class="navigationbarbutton navigationbarselect" onclick="location.href='signin.html'" value="登入後台">
+            </div>
+        </div>
+
+        <div class="main loginmain" id="loginmain">
+            <div class="inputmargin">
+                <div class="sttextlabel">帳號</div>
+                <div class="stinput endicon underline">
+                    <input type="text" id="username">
+                    <div class="sticon"><img src="/website/material/icon/user.svg" class="iconinputicon" draggable="false"></div>
+                </div>
+            </div>
+            <div class="inputmargin">
+                <div class="sttextlabel">密碼</div>
+                <div class="stinput endicon underline">
+                    <input type="text" id="password">
+                    <div class="sticon"><img src="/website/material/icon/eyeclose.svg" class="iconinputicon cursor_pointer" draggable="false"></div>
+                </div>
+            </div>
+            <div class="center inputmargin">
+                <input type="button" class="stbutton outline inputbutton" id="signup" value="註冊">
+                <input type="button" class="stbutton outline inputbutton" id="submit" value="登入">
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footertopdiv">
+                <div class="footertop">
+                    <img src="material/icon/logo.png" class="footerlogo">
+                </div>
+                <div class="footertop">
+                    <img src="material/picture/line.png" class="footericon"><br>
+                    wang00123
+                </div>
+                <div class="footertop">
+                    <img src="material/picture/mail.png" class="footericon"><br>
+                    clelerver@gmail.com
+                </div>
+                <div class="footertop">
+                    <img src="material/picture/phone.png" class="footericon"><br>
+                    0912252136
+                </div>
+            </div>
+            <div class="footerbottom">
+                統一編號: 94313069<br>
+                Copyright &copy; 2023 clelervr. All Rights Reserved.
+            </div>
+        </div>
+
         <script src="signin.js"></script>
         <script src="signincheck.js"></script>
     </body>

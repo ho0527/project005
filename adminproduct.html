@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html class="light">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="plugin/css/tocas.css">
         <link rel="stylesheet" href="/website/plugin/css/chrisplugin.css">
         <script src="/website/plugin/js/chrisplugin.js"></script>
     </head>
@@ -17,23 +18,56 @@
                 <input type="button" class="navigationbarbutton" value="公司簡介">
                 <input type="button" class="navigationbarbutton" value="服務說明">
                 <input type="button" class="navigationbarbutton navigationbarselect" onclick="location.reload()" value="解決方案">
-                <input type="button" class="navigationbarbutton" onclick="location.href='adminwebknowledge.html'" value="網站知識">
+                <input type="button" class="navigationbarbutton" onclick="location.href='webknowledge.html'" value="網站知識">
                 <input type="button" class="navigationbarbutton" value="聯絡我們">
                 <input type="button" class="navigationbarbutton" id="signout" value="登出">
             </div>
         </div>
-        <div class="productmaindiv">
-            <div class="productfunction">
-                <div class="div">
-                    <input type="button" class="button" data-id="all" value="全部">
-                    <input type="button" class="button" data-id="system" value="系統整合">
-                    <input type="button" class="button" data-id="commercializeapp" value="商業化軟體">
-                    <input type="button" class="button" data-id="personalizeapp" value="個人化軟體">
+
+        <div class="productmaindiv macossectiondivy">
+            <img src="design/yy.png" class="maincover">
+            <div class="productmain">
+                <div class="producttitle">解決方案 X 成功案例</div>
+                <div class="productfunction">
+                    <input type="button" class="productbutton" data-id="all" value="全部">
+                    <input type="button" class="productbutton" data-id="system" value="系統整合">
+                    <input type="button" class="productbutton" data-id="commercializeapp" value="商業化軟體">
+                    <input type="button" class="productbutton" data-id="personalizeapp" value="個人化軟體">
+                    <input type="button" class="productbutton" id="newproduct" value="新增貼文">
                 </div>
-                <input type="button" class="button newproductbutton" id="newproduct" value="新增貼文">
+                <div class="productpostdiv" id="post"></div>
             </div>
-            <div class="productpostdiv macossectiondivy" id="post"></div>
         </div>
+
+        <div class="mainfunction">
+            <div class="gotop"></div>
+            <div class="freeask"></div>
+        </div>
+
+        <div class="footer">
+            <div class="footertopdiv">
+                <div class="footertop">
+                    <img src="material/icon/logo.png" class="footerlogo">
+                </div>
+                <div class="footertop">
+                    <img src="material/picture/line.png" class="footericon"><br>
+                    wang00123
+                </div>
+                <div class="footertop">
+                    <img src="material/picture/mail.png" class="footericon"><br>
+                    clelerver@gmail.com
+                </div>
+                <div class="footertop">
+                    <img src="material/picture/phone.png" class="footericon"><br>
+                    0912252136
+                </div>
+            </div>
+            <div class="footerbottom">
+                統一編號: 94313069<br>
+                Copyright &copy; 2023 clelervr. All Rights Reserved.
+            </div>
+        </div>
+
         <script src="adminproduct.js"></script>
         <script src="signincheck.js"></script>
     </body>

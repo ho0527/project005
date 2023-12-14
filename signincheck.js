@@ -8,8 +8,8 @@ ajax("GET","/backend/project005/signincheck",function(event){
                 location.href="admin.html"
             }
         }else{
-            if(file=="admin.html"){
-                location.href="login.html"
+            if(file=="admin.html"||file=="adminproduct.html"||file=="adminwebknowledge.html"){
+                location.href="signin.html"
             }
         }
     }else{

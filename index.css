@@ -2,7 +2,7 @@ body{
     font-family: "Consolas";
     background: rgb(238, 245, 248);
     color: black;
-    text-align: center;
+    /* text-align: center; */
     word-break: break-all;
     /* -webkit-user-select: none;
     user-select: none; */
@@ -10,11 +10,6 @@ body{
     margin: 0px;
     width: 100vw;
     height: 100vh;
-}
-
-h1,h2,h3,h4,h5,h6{
-    margin: 0px;
-    color: white;
 }
 
 hr{
@@ -140,10 +135,9 @@ table{
 }
 
 .center{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .xcenter{
@@ -713,3 +707,15 @@ table{
 }
 
 /* footer END */
+
+.loginmain{
+    width: 40vw;
+}
+
+.inputmargin{
+    margin: 5px 0px;
+}
+
+.inputbutton{
+    border: 1px lightgray solid !important;
+}
