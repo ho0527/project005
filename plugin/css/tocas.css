@@ -490,15 +490,15 @@ html.light .has-light-hidden,html.dark .has-dark-hidden{
     Scales
     ========================================================================== */
 
-html.is-small,html.is-small body{
+html.small,html.small body{
     font-size: 14px;
 }
 
-html.is-medium,html.is-medium body{
+html.medium,html.medium body{
     font-size: 15px;
 }
 
-html.is-large,html.is-large body{
+html.large,html.large body{
     font-size: 16px;
 }
 
@@ -653,7 +653,7 @@ button{
 /* ========================================================================== Base ========================================================================== */
 
 .stbutton{
-    margin: 0;
+    margin: 5px;
     width: auto;
     font: inherit;
     outline: none;
@@ -736,13 +736,13 @@ button{
   * Negative
   */
 
-.stbutton.is-negative{
+.stbutton.negative{
     color: var(--stwhite);
     border-color: var(--stnegative-500);
     background: var(--stnegative-500);
 }
 
-.stbutton.is-negative.outline{
+.stbutton.negative.outline{
     color: var(--stnegative-500);
     border-color: var(--stgray-300);
     background: transparent;
@@ -762,7 +762,7 @@ button{
     background: var(--stgray-100);
 }
 
-.stbutton.is-ghost.is-negative{
+.stbutton.is-ghost.negative{
     color: var(--stnegative-500);
 }
 
@@ -770,17 +770,17 @@ button{
   * Loading
   */
 
-.stbutton.is-loading,.stbutton.is-loading.is-negative{
+.stbutton.loading,.stbutton.loading.negative{
     color: transparent;
     pointer-events: none;
     opacity: 0.5;
 }
 
-.stbutton.is-loading .sticon{
+.stbutton.loading .sticon{
     visibility: hidden;
 }
 
-.stbutton.is-loading::after{
+.stbutton.loading::after{
     font-family: "Icons";
     font-weight: normal;
     font-style: normal;
@@ -799,7 +799,7 @@ button{
     left: 50%;
 }
 
-.stbutton.is-loading:is(.outline, .is-secondary, .is-tertiary, .is-ghost)::after{
+.stbutton.loading:is(.outline, .is-secondary, .is-tertiary, .is-ghost)::after{
     color: var(--stgray-800);
 }
 
@@ -816,13 +816,13 @@ button{
   * Sizes
   */
 
-.stbutton.is-small{
+.stbutton.small{
     --height: var(--stinput-height-small);
 
     font-size: var(--stfont-size-13px);
 }
 
-.stbutton.is-large{
+.stbutton.large{
     --height: var(--stinput-height-large);
 
     font-size: var(--stfont-size-16px);
@@ -869,7 +869,7 @@ button{
     font-size: 1.2em;
 }
 
-.stbutton.fullicon.is-small .sticon{
+.stbutton.fullicon.small .sticon{
     font-size: 1.15em;
 }
 
@@ -932,7 +932,7 @@ button{
     border-radius: 0 0.4rem 0.4rem 0;
 }
 
-.stbutton.is-negative:is(.is-start-labeled-icon, .is-end-labeled-icon) .sticon{
+.stbutton.negative:is(.is-start-labeled-icon, .is-end-labeled-icon) .sticon{
     background: var(--stnegative-400);
 }
 
@@ -958,11 +958,11 @@ button{
     --height: var(--stinput-height-medium-dense);
 }
 
-.stbutton.is-dense.is-small{
+.stbutton.is-dense.small{
     --height: var(--stinput-height-small-dense);
 }
 
-.stbutton.is-dense.is-large{
+.stbutton.is-dense.large{
     --height: var(--stinput-height-large-dense);
 }
 
@@ -1031,7 +1031,7 @@ button{
     display: none;
 }
 
-.stbuttons .stbutton.is-negative::before{
+.stbuttons .stbutton.negative::before{
     background: var(--stnegative-400);
 }
 
@@ -2745,7 +2745,7 @@ button{
     content: "\3d";
 }
 
-.sticon.is-medium-icon::before{
+.sticon.medium-icon::before{
     font-family: "IconsBrands";
     content: "\f23a";
 }
@@ -9076,7 +9076,7 @@ button{
   * Negative
   */
 
-.sticon.is-negative{
+.sticon.negative{
     color: var(--stnegative-500);
 }
 
@@ -9116,19 +9116,19 @@ button{
   * Sizes
   */
 
-.sticon.is-small{
+.sticon.small{
     font-size: var(--stfont-size-13px);
 }
 
-.sticon.is-large{
+.sticon.large{
     font-size: var(--stfont-size-18px);
 }
 
-.sticon.is-big{
+.sticon.big{
     font-size: var(--stfont-size-24px);
 }
 
-.sticon.is-huge{
+.sticon.huge{
     font-size: var(--stfont-size-30px);
 }
 
@@ -9551,28 +9551,28 @@ button{
   * Negative
   */
 
-.stinput.is-negative:is(input, textarea){
+.stinput.negative:is(input, textarea){
     color: var(--stnegative-600);
     border-color: var(--stnegative-400);
     font-weight: 500;
 }
 
-.stinput.is-negative .label{
+.stinput.negative .label{
     border-color: var(--stnegative-400);
 }
 
 /** Solid */
-.stinput.is-negative.is-solid:is(.is-start-labeled, .islabel, .is-end-labeled) .label{
+.stinput.negative.is-solid:is(.is-start-labeled, .islabel, .is-end-labeled) .label{
     border-color: var(--stnegative-400);
 }
 
-.stinput.is-negative.is-solid input:focus,.stinput.is-negative.is-solid textarea:focus{
+.stinput.negative.is-solid input:focus,.stinput.negative.is-solid textarea:focus{
     background: var(--stgray-100);
     border: 1px solid var(--stnegative-400);
 }
 
 /** Underlined */
-.stinput.is-negative.underline:is(.label, input, textarea){
+.stinput.negative.underline:is(.label, input, textarea){
     border-color: transparent;
     border-bottom-color: var(--stnegative-400);
 }
@@ -9612,11 +9612,11 @@ button{
     --height: var(--stinput-height-medium-dense);
 }
 
-.stinput.is-dense.is-small input{
+.stinput.is-dense.small input{
     --height: var(--stinput-height-small-dense);
 }
 
-.stinput.is-dense.is-large input{
+.stinput.is-dense.large input{
     --height: var(--stinput-height-large-dense);
 }
 
@@ -9632,19 +9632,19 @@ button{
   * Sizes
   */
 
-.stinput.is-small input{
+.stinput.small input{
     --height: var(--stinput-height-small);
 }
 
-.stinput.is-large input{
+.stinput.large input{
     --height: var(--stinput-height-large);
 }
 
-.stinput.is-small:is(input, textarea, .sticon){
+.stinput.small:is(input, textarea, .sticon){
     font-size: var(--stfont-size-13px);
 }
 
-.stinput.is-large:is(input, textarea, .sticon){
+.stinput.large:is(input, textarea, .sticon){
     font-size: var(--stfont-size-17px);
 }
 
@@ -9841,13 +9841,13 @@ button{
   * Negative
   */
 
-.stfile.is-negative input{
+.stfile.negative input{
     border-color: var(--stnegative-400);
     color: var(--stnegative-600);
     font-weight: 500;
 }
 
-.stfile.is-negative.underline input{
+.stfile.negative.underline input{
     border-color: transparent;
     border-bottom-color: var(--stnegative-400);
 }
@@ -9856,19 +9856,19 @@ button{
   * Sizes
   */
 
-.stfile.is-small input{
+.stfile.small input{
     --height: var(--stinput-height-small);
 }
 
-.stfile.is-large input{
+.stfile.large input{
     --height: var(--stinput-height-large);
 }
 
-.stfile.is-small:is(input, input::file-selector-button, input::-webkit-file-upload-button){
+.stfile.small:is(input, input::file-selector-button, input::-webkit-file-upload-button){
     font-size: var(--stfont-size-13px);
 }
 
-.stfile.is-large:is(input, input::file-selector-button, input::-webkit-file-upload-button){
+.stfile.large:is(input, input::file-selector-button, input::-webkit-file-upload-button){
     font-size: var(--stfont-size-17px);
 }
 
@@ -9885,11 +9885,11 @@ button{
     padding-bottom: 0.15rem;
 }
 
-.stfile.is-small.is-dense input{
+.stfile.small.is-dense input{
     --height: var(--stinput-height-small-dense);
 }
 
-.stfile.is-large.is-dense input{
+.stfile.large.is-dense input{
     --height: var(--stinput-height-large-dense);
 }
 
@@ -9950,12 +9950,12 @@ button{
   * Negative
   */
 
-.stnotice.is-negative{
+.stnotice.negative{
     background: var(--stnegative-500);
     color: var(--stwhite);
 }
 
-.stnotice.is-negative .title{
+.stnotice.negative .title{
     background: var(--stwhite);
     color: var(--stnegative-600);
 }
@@ -9975,7 +9975,7 @@ button{
     color: var(--accent-foreground-color, var(--stgray-50));
 }
 
-.stnotice.outline.is-negative .title{
+.stnotice.outline.negative .title{
     background: var(--stnegative-500);
     color: var(--stgray-50);
 }
@@ -9984,11 +9984,11 @@ button{
   * Sizes
   */
 
-.stnotice.is-small,.stnotice.is-small .title{
+.stnotice.small,.stnotice.small .title{
     font-size: var(--stfont-size-13px);
 }
 
-.stnotice.is-large,.stnotice.is-large .title{
+.stnotice.large,.stnotice.large .title{
     font-size: var(--stfont-size-17px);
 }
 
@@ -10135,7 +10135,7 @@ button{
   * Negative
   */
 
-.stcheckbox.is-negative input{
+.stcheckbox.negative input{
     border-color: var(--stnegative-600);
     border-width: 2px;
 }
@@ -10152,29 +10152,29 @@ button{
   * Sizes
   */
 
-.stcheckbox.is-small input{
+.stcheckbox.small input{
     min-height: 0.95rem;
     min-width: 0.95rem;
 }
 
-.stcheckbox.is-small input::after{
+.stcheckbox.small input::after{
     font-size: var(--stfont-size-12px);
 }
 
-.stcheckbox.is-small{
+.stcheckbox.small{
     font-size: var(--stfont-size-14px);
 }
 
-.stcheckbox.is-large input{
+.stcheckbox.large input{
     min-height: 1.3rem;
     min-width: 1.3rem;
 }
 
-.stcheckbox.is-large{
+.stcheckbox.large{
     font-size: var(--stfont-size-17px);
 }
 
-.stcheckbox.is-large input::after{
+.stcheckbox.large input::after{
     font-size: var(--stfont-size-16px);
 }
 
@@ -10307,7 +10307,7 @@ button{
   * Negative
   */
 
-.radio.is-negative input{
+.radio.negative input{
     border-color: var(--stnegative-600);
     border-width: 2px;
 }
@@ -10316,29 +10316,29 @@ button{
   * Sizes
   */
 
-.radio.is-small input{
+.radio.small input{
     min-height: 0.95rem;
     min-width: 0.95rem;
 }
 
-.radio.is-small input::after{
+.radio.small input::after{
     font-size: var(--stfont-size-14px);
 }
 
-.radio.is-small{
+.radio.small{
     font-size: var(--stfont-size-14px);
 }
 
-.radio.is-large input{
+.radio.large input{
     min-height: 1.3rem;
     min-width: 1.3rem;
 }
 
-.radio.is-large{
+.radio.large{
     font-size: var(--stfont-size-17px);
 }
 
-.radio.is-large input::after{
+.radio.large input::after{
     font-size: var(--stfont-size-18px);
 }
 
@@ -10507,23 +10507,23 @@ button{
   * Sizes
   */
 
-.stprogress.is-tiny{
+.stprogress.tiny{
     min-height: 0.7rem;
 }
 
-.stprogress.is-tiny .bar .text{
+.stprogress.tiny .bar .text{
     font-size: 0.8em;
 }
 
-.stprogress.is-small{
+.stprogress.small{
     min-height: 1.2rem;
 }
 
-.stprogress.is-small .bar .text{
+.stprogress.small .bar .text{
     font-size: 0.85em;
 }
 
-.stprogress.is-large .bar{
+.stprogress.large .bar{
     min-height: calc(1.75rem + 1.75rem / 4);
 }
 
@@ -10583,12 +10583,12 @@ button{
   * Negative
   */
 
-.stbadge.is-negative{
+.stbadge.negative{
     background: var(--stnegative-500);
     color: var(--stwhite);
 }
 
-.stbadge.is-negative.outline{
+.stbadge.negative.outline{
     background: transparent;
     border-color: var(--stnegative-500);
     color: var(--stnegative-700);
@@ -10598,11 +10598,11 @@ button{
   * Sizes
   */
 
-.stbadge.is-small{
+.stbadge.small{
     font-size: var(--stfont-size-12px);
 }
 
-.stbadge.is-large{
+.stbadge.large{
     font-size: var(--stfont-size-16px);
 }
 
@@ -10724,7 +10724,7 @@ button{
   * Aligns
   */
 
-/*.stpagination.is-end-aligned{
+/*.stpagination.textright{
      margin-left: auto;
  }*/
 
@@ -10782,11 +10782,11 @@ button{
   * Sizes
   */
 
-.stpagination.is-small{
+.stpagination.small{
     font-size: var(--stfont-size-13px);
 }
 
-.stpagination.is-large{
+.stpagination.large{
     font-size: var(--stfont-size-17px);
 }
 
@@ -11050,16 +11050,16 @@ button{
   * Negative
   */
 
-.stselect.is-negative{
+.stselect.negative{
     border-color: var(--stnegative-400);
 }
 
-.stselect.is-negative select{
+.stselect.negative select{
     color: var(--stnegative-600);
     font-weight: 500;
 }
 
-.stselect.is-negative.underline{
+.stselect.negative.underline{
     border-color: transparent;
     border-bottom-color: var(--stnegative-400);
 }
@@ -11068,19 +11068,19 @@ button{
   * Sizes
   */
 
-.stselect.is-small{
+.stselect.small{
     --height: var(--stinput-height-small);
 }
 
-.stselect.is-large{
+.stselect.large{
     --height: var(--stinput-height-large);
 }
 
-.stselect.is-small select{
+.stselect.small select{
     font-size: var(--stfont-size-13px);
 }
 
-.stselect.is-large select{
+.stselect.large select{
     font-size: var(--stfont-size-17px);
 }
 
@@ -11092,11 +11092,11 @@ button{
     --height: var(--stinput-height-medium-dense);
 }
 
-.stselect.is-dense.is-small{
+.stselect.is-dense.small{
     --height: var(--stinput-height-small-dense);
 }
 
-.stselect.is-dense.is-large{
+.stselect.is-dense.large{
     --height: var(--stinput-height-large-dense);
 }
 
@@ -11274,19 +11274,9 @@ button{
     color: var(--stgray-500);
 }
 
-/**
-  * Bold
-  */
+/* Bold */
 
-.sttext.is-bold{
-    font-weight: 500 !important;
-}
-
-/**
-  * Heavy
-  */
-
-.sttext.is-heavy{
+.bold{
     font-weight: bold !important;
 }
 
@@ -11385,8 +11375,8 @@ button{
   * Mark
   */
 
-.sttext.is-mark{
-    border-radius: 0.4rem;
+.mark{
+    border-radius: 0;
     background: var(--stwarning-500);
     padding: 0 0.25rem;
     color: var(--stblack);
@@ -11438,34 +11428,18 @@ button{
 }
 
 /**
-  * Uppercased
-  */
-
-.sttext.is-uppercased{
-    text-transform: uppercase;
-}
-
-/**
-  * Lowercased
-  */
-
-.sttext.is-lowercased{
-    text-transform: lowercase;
-}
-
-/**
   * Aligns
   */
 
-.sttext.is-center-aligned{
+.sttext.textcenter{
     text-align: center;
 }
 
-.sttext.is-start-aligned{
+.sttext.textleft{
     text-align: left;
 }
 
-.sttext.is-end-aligned{
+.sttext.textright{
     text-align: right;
 }
 
@@ -11517,31 +11491,31 @@ button{
   * Sizes
   */
 
-.sttext.is-tiny{
+.sttext.tiny{
     font-size: var(--stfont-size-13px);
 }
 
-.sttext.is-small{
+.sttext.small{
     font-size: var(--stfont-size-14px);
 }
 
-.sttext.is-medium{
+.sttext.medium{
     font-size: var(--stfont-size-15px);
 }
 
-.sttext.is-large{
+.sttext.large{
     font-size: var(--stfont-size-17px);
 }
 
-.sttext.is-big{
+.sttext.big{
     font-size: var(--stfont-size-20px);
 }
 
-.sttext.is-huge{
+.sttext.huge{
     font-size: var(--stfont-size-24px);
 }
 
-.sttext.is-massive{
+.sttext.massive{
     font-size: var(--stfont-size-30px);
 }
 
@@ -11549,11 +11523,11 @@ button{
   * Negative
   */
 
-.sttext.is-negative{
+.sttext.negative{
     color: var(--stnegative-600);
 }
 
-.sttext.is-negative.is-secondary{
+.sttext.negative.is-secondary{
     color: var(--stnegative-500);
 }
 
@@ -11659,15 +11633,15 @@ button{
   * Aligns
   */
 
-.sttab.is-start-aligned{
+.sttab.textleft{
     justify-content: flex-start;
 }
 
-.sttab.is-center-aligned{
+.sttab.textcenter{
     justify-content: center;
 }
 
-.sttab.is-end-aligned{
+.sttab.textright{
     justify-content: flex-end;
 }
 
@@ -11754,19 +11728,19 @@ button{
   * Sizes
   */
 
-.sttab.is-small .item{
+.sttab.small .item{
     font-size: var(--stfont-size-14px);
 }
 
-.sttab.is-large .item{
+.sttab.large .item{
     font-size: var(--stfont-size-17px);
 }
 
-.sttab.is-small.is-segmented{
+.sttab.small.is-segmented{
     --height: var(--stinput-height-small);
 }
 
-.sttab.is-large.is-segmented{
+.sttab.large.is-segmented{
     --height: var(--stinput-height-large);
 }
 
@@ -11793,11 +11767,11 @@ button{
     --height: var(--stinput-height-medium-dense);
 }
 
-.sttab.is-segmented.is-small.is-dense{
+.sttab.is-segmented.small.is-dense{
     --height: var(--stinput-height-small-dense);
 }
 
-.sttab.is-segmented.is-large.is-dense{
+.sttab.is-segmented.large.is-dense{
     --height: var(--stinput-height-large-dense);
 }
 
@@ -11901,7 +11875,7 @@ a.stbox:hover{
   * Emphasises
   */
 
-.stbox[class*="-indicated"].is-negative{
+.stbox[class*="-indicated"].negative{
     --stindicator-color: var(--stnegative-500);
 }
 
@@ -12009,15 +11983,15 @@ a.stbox:hover{
   * Aligns
   */
 
-.stcontent.is-start-aligned{
+.stcontent.textleft{
     text-align: left;
 }
 
-.stcontent.is-end-aligned{
+.stcontent.textright{
     text-align: right;
 }
 
-.stcontent.is-center-aligned{
+.stcontent.textcenter{
     text-align: center;
 }
 
@@ -12216,31 +12190,31 @@ a.stbox:hover{
     width: 35px;
 }
 
-.stimage.is-tiny img{
+.stimage.tiny img{
     width: 80px;
 }
 
-.stimage.is-small img{
+.stimage.small img{
     width: 150px;
 }
 
-.stimage.is-medium img{
+.stimage.medium img{
     width: 300px;
 }
 
-.stimage.is-large img{
+.stimage.large img{
     width: 450px;
 }
 
-.stimage.is-big img{
+.stimage.big img{
     width: 600px;
 }
 
-.stimage.is-huge img{
+.stimage.huge img{
     width: 800px;
 }
 
-.stimage.is-massive img{
+.stimage.massive img{
     width: 960px;
 }
 
@@ -12371,7 +12345,7 @@ a.stbox:hover{
   * Negative
   */
 
-.stswitch.is-negative input{
+.stswitch.negative input{
     border-radius: 100rem;
     border: 2px solid var(--stnegative-600);
 }
@@ -12380,41 +12354,41 @@ a.stbox:hover{
   * Sizes
   */
 
-.stswitch.is-small{
+.stswitch.small{
     font-size: var(--stfont-size-14px);
 }
 
-.stswitch.is-small input::after{
+.stswitch.small input::after{
     height: 19px;
     width: 31px;
 }
 
-.stswitch.is-small input::before{
+.stswitch.small input::before{
     height: 12px;
     width: 12px;
     top: 3.5px;
 }
 
-.stswitch.is-small input:checked::before{
+.stswitch.small input:checked::before{
     left: 15px;
 }
 
-.stswitch.is-large{
+.stswitch.large{
     font-size: var(--stfont-size-17px);
 }
 
-.stswitch.is-large input::after{
+.stswitch.large input::after{
     height: 25px;
     width: 46px;
 }
 
-.stswitch.is-large input::before{
+.stswitch.large input::before{
     height: 18px;
     width: 18px;
     top: 3.5px;
 }
 
-.stswitch.is-large input:checked::before{
+.stswitch.large input:checked::before{
     left: 24px;
 }
 
@@ -12462,19 +12436,19 @@ a.stbox:hover{
   * Aligns
   */
 
-.stmeta:is(.is-start-aligned, .is-center-aligned, .is-end-aligned){
+.stmeta:is(.textleft, .textcenter, .textright){
     display: flex;
 }
 
-.stmeta.is-start-aligned{
+.stmeta.textleft{
     justify-content: flex-start;
 }
 
-.stmeta.is-center-aligned{
+.stmeta.textcenter{
     justify-content: center;
 }
 
-.stmeta.is-end-aligned{
+.stmeta.textright{
     justify-content: flex-end;
 }
 
@@ -12490,11 +12464,11 @@ a.stbox:hover{
   * Sizes
   */
 
-.stmeta.is-small{
+.stmeta.small{
     font-size: var(--stfont-size-14px);
 }
 
-.stmeta.is-large{
+.stmeta.large{
     font-size: var(--stfont-size-17px);
 }
 
@@ -12608,19 +12582,19 @@ a.stbox:hover{
   * Sizes
   */
 
-.selection.is-small{
+.selection.small{
     --height: var(--stinput-height-small);
 }
 
-.selection.is-small .item .text{
+.selection.small .item .text{
     font-size: var(--stfont-size-13px);
 }
 
-.selection.is-large{
+.selection.large{
     --height: var(--stinput-height-large);
 }
 
-.selection.is-large .item .text{
+.selection.large .item .text{
     font-size: var(--stfont-size-17px);
 }
 
@@ -12632,11 +12606,11 @@ a.stbox:hover{
     --height: var(--stinput-height-medium-dense);
 }
 
-.selection.is-dense.is-small{
+.selection.is-dense.small{
     --height: var(--stinput-height-small-dense);
 }
 
-.selection.is-dense.is-small{
+.selection.is-dense.small{
     --height: var(--stinput-height-large-dense);
 }
 
@@ -12714,11 +12688,11 @@ a.stbox:hover{
   * Sizes
   */
 
-.sttable.is-small,.sttable.is-small:is(thead, tbody, tfoot, tr, th, td){
+.sttable.small,.sttable.small:is(thead, tbody, tfoot, tr, th, td){
     font-size: var(--stfont-size-13px);
 }
 
-.sttable.is-large,.sttable.is-large:is(thead, tbody, tfoot, tr, th, td){
+.sttable.large,.sttable.large:is(thead, tbody, tfoot, tr, th, td){
     font-size: var(--stfont-size-16px);
 }
 
@@ -12818,15 +12792,15 @@ a.stbox:hover{
   * Aligns
   */
 
-.sttable:is(tr, th, td).is-start-aligned{
+.sttable:is(tr, th, td).textleft{
     text-align: left;
 }
 
-.sttable:is(th, td).is-center-aligned{
+.sttable:is(th, td).textcenter{
     text-align: center;
 }
 
-.sttable:is(th, td).is-end-aligned{
+.sttable:is(th, td).textright{
     text-align: right;
 }
 
@@ -12900,7 +12874,7 @@ a.stbox:hover{
     box-shadow: 2px 0 0 var(--stgray-900) inset;
 }
 
-.sttable:is(tr, tr th, tr td).is-indicated.is-negative{
+.sttable:is(tr, tr th, tr td).is-indicated.negative{
     box-shadow: 2px 0 0 var(--stnegative-600) inset;
 }
 
@@ -13222,13 +13196,13 @@ a.stbox:hover{
   * Negative
   */
 
-.stprocedure .item.is-negative .indicator{
+.stprocedure .item.negative .indicator{
     background: var(--stnegative-500);
     color: var(--stwhite);
     border-color: var(--stnegative-500);
 }
 
-.stprocedure .item.is-negative .label{
+.stprocedure .item.negative .label{
     color: var(--stnegative-500);
 }
 
@@ -13329,11 +13303,11 @@ a.stbox:hover{
   * Sizes
   */
 
-.stprocedure.is-small{
+.stprocedure.small{
     font-size: var(--stfont-size-14px);
 }
 
-.stprocedure.is-large{
+.stprocedure.large{
     font-size: var(--stfont-size-17px);
 }
 
@@ -13527,15 +13501,15 @@ a.stbox:hover{
   * Aligns
   */
 
-.stgrid.is-start-aligned{
+.stgrid.textleft{
     justify-content: flex-start;
 }
 
-.stgrid.is-center-aligned{
+.stgrid.textcenter{
     justify-content: center;
 }
 
-.stgrid.is-end-aligned{
+.stgrid.textright{
     justify-content: flex-end;
 }
 
@@ -13551,19 +13525,19 @@ a.stbox:hover{
     align-items: flex-end;
 }
 
-.stgrid .column.is-start-aligned{
+.stgrid .column.textleft{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.stgrid .column.is-center-aligned{
+.stgrid .column.textcenter{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.stgrid .column.is-end-aligned{
+.stgrid .column.textright{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -13850,11 +13824,11 @@ a.stbox:hover{
   * Sizes
   */
 
-.strating.is-small{
+.strating.small{
     font-size: var(--stfont-size-13px);
 }
 
-.strating.is-large{
+.strating.large{
     font-size: var(--stfont-size-18px);
 }
 
@@ -14030,11 +14004,11 @@ a.stbox:hover{
   * Sizes
   */
 
-.stchip.is-small,.stchip.is-small .content{
+.stchip.small,.stchip.small .content{
     font-size: var(--stfont-size-12px);
 }
 
-.stchip.is-large,.stchip.is-large .content{
+.stchip.large,.stchip.large .content{
     font-size: var(--stfont-size-16px);
 }
 
@@ -14162,18 +14136,18 @@ a.stbox:hover{
   * Sizes
   */
 
-.stclose.is-small{
+.stclose.small{
     height: 16px;
     width: 16px;
 }
 
-.stclose.is-large{
+.stclose.large{
     height: 22px;
     width: 22px;
     font-size: var(--stfont-size-14px);
 }
 
-.stclose.is-big{
+.stclose.big{
     height: 27px;
     width: 27px;
     font-size: var(--stfont-size-17px);
@@ -14270,11 +14244,11 @@ a.stbox:hover{
   * Sizes
   */
 
-.stloading.is-small::after{
+.stloading.small::after{
     font-size: 1rem;
 }
 
-.stloading.is-large::after{
+.stloading.large::after{
     font-size: 2.8rem;
 }
 
@@ -14404,11 +14378,11 @@ a.stbox:hover{
   * Sizes
   */
 
-.stbreadcrumb.is-small{
+.stbreadcrumb.small{
     font-size: var(--stfont-size-14px);
 }
 
-.stbreadcrumb.is-large{
+.stbreadcrumb.large{
     font-size: var(--stfont-size-17px);
 }
 
@@ -14466,11 +14440,11 @@ a.stbox:hover{
   * Sizes
   */
 
-.stlist.is-small{
+.stlist.small{
     font-size: var(--stfont-size-14px);
 }
 
-.stlist.is-large{
+.stlist.large{
     font-size: var(--stfont-size-17px);
 }
 
@@ -14521,17 +14495,17 @@ a.stbox:hover{
   * Sizes
   */
 
-.stflag.is-small{
+.stflag.small{
     width: calc(4 / 3 * 0.95rem);
     height: 0.95rem;
 }
 
-.stflag.is-large{
+.stflag.large{
     width: calc(4 / 3 * 1.2rem);
     height: 1.2rem;
 }
 
-.stflag.is-small:is(.is-squared, .is-circular){
+.stflag.small:is(.is-squared, .is-circular){
     width: 0.95rem;
     height: 0.95rem;
 }
@@ -14541,7 +14515,7 @@ a.stbox:hover{
     height: 1.05rem;
 }
 
-.stflag.is-large:is(.is-squared, .is-circular){
+.stflag.large:is(.is-squared, .is-circular){
     width: 1.2rem;
     height: 1.2rem;
 }
@@ -16723,11 +16697,11 @@ a.stbox:hover{
   * Aligns
   */
 
-.ststatistic.is-start-aligned>.value{
+.ststatistic.textleft>.value{
     justify-content: flex-start;
 }
 
-.ststatistic.is-center-aligned>.value{
+.ststatistic.textcenter>.value{
     justify-content: center;
 }
 
@@ -16791,27 +16765,27 @@ a.stbox:hover{
     font-size: 0.8125rem;
 }
 
-.ststatistic.is-tiny.is-tiny.is-tiny{
+.ststatistic.tiny.tiny.tiny{
     font-size: 0.875rem;
 }
 
-.ststatistic.is-small.is-small.is-small{
+.ststatistic.small.small.small{
     font-size: 0.9375rem;
 }
 
-.ststatistic.is-large.is-large.is-large{
+.ststatistic.large.large.large{
     font-size: 1.125rem;
 }
 
-.ststatistic.is-big.is-big.is-big{
+.ststatistic.big.big.big{
     font-size: 1.375rem;
 }
 
-.ststatistic.is-huge.is-huge.is-huge{
+.ststatistic.huge.huge.huge{
     font-size: 1.75rem;
 }
 
-.ststatistic.is-massive.is-massive.is-massive{
+.ststatistic.massive.massive.massive{
     font-size: 2rem;
 }
 
@@ -17126,7 +17100,7 @@ a.stbox:hover{
   * Negative
   */
 
-.stsnackbar .action.is-negative{
+.stsnackbar .action.negative{
     color: var(--stnegative-500);
 }
 
@@ -17450,7 +17424,7 @@ details.staccordion[open] summary{
   * Loading
   */
 
-.stplaceholder.is-loading .text,.stplaceholder.is-loading .text.is-header,.stplaceholder.is-loading .image.is-header::after,.stplaceholder.is-loading .image.is-header::before,.stplaceholder.is-loading .image{
+.stplaceholder.loading .text,.stplaceholder.loading .text.is-header,.stplaceholder.loading .image.is-header::after,.stplaceholder.loading .image.is-header::before,.stplaceholder.loading .image{
     animation-duration: 1.2s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
@@ -17461,7 +17435,7 @@ details.staccordion[open] summary{
     background-size: 1000px 200px;
 }
 
-.stplaceholder.is-loading .text.is-header{
+.stplaceholder.loading .text.is-header{
     background: linear-gradient(to right, var(--stgray-300) 8%, var(--stgray-400) 18%, var(--stgray-300) 33%);
     background-size: 1000px 200px;
 }
@@ -17555,7 +17529,7 @@ a.stheader:hover{
   * Negative
   */
 
-.stheader.is-negative{
+.stheader.negative{
     color: var(--stnegative-600);
 }
 
@@ -17571,17 +17545,17 @@ a.stheader:hover{
   * Aligns
   */
 
-.stheader.is-center-aligned{
+.stheader.textcenter{
     text-align: center;
     justify-content: center;
 }
 
-.stheader.is-start-aligned{
+.stheader.textleft{
     text-align: left;
     justify-content: flex-start;
 }
 
-.stheader.is-end-aligned{
+.stheader.textright{
     text-align: right;
     justify-content: flex-end;
 }
@@ -17649,19 +17623,19 @@ a.stheader:hover{
   * Sizes
   */
 
-.stheader.is-large{
+.stheader.large{
     font-size: var(--stfont-size-20px);
 }
 
-.stheader.is-big{
+.stheader.big{
     font-size: var(--stfont-size-24px);
 }
 
-.stheader.is-huge{
+.stheader.huge{
     font-size: var(--stfont-size-30px);
 }
 
-.stheader.is-massive{
+.stheader.massive{
     font-size: var(--stfont-size-33px);
 }
 
@@ -17755,15 +17729,15 @@ a.stsegment:hover{
   * Aligns
   */
 
-.stsegment.is-start-aligned{
+.stsegment.textleft{
     text-align: left;
 }
 
-.stsegment.is-end-aligned{
+.stsegment.textright{
     text-align: right;
 }
 
-.stsegment.is-center-aligned{
+.stsegment.textcenter{
     text-align: center;
 }
 
@@ -17771,7 +17745,7 @@ a.stsegment:hover{
   * Emphasises
   */
 
-.stsegment[class*="-indicated"].is-negative{
+.stsegment[class*="-indicated"].negative{
     --stindicator-color: var(--stnegative-500);
 }
 
@@ -17931,11 +17905,11 @@ a.stsegment:hover{
   * Sizes
   */
 
-.stquote.is-small{
+.stquote.small{
     font-size: var(--stfont-size-14px);
 }
 
-.stquote.is-large{
+.stquote.large{
     font-size: var(--stfont-size-17px);
 }
 
@@ -18142,12 +18116,12 @@ a.stsegment:hover{
   * Sizes
   */
 
-.stavatar.is-small{
+.stavatar.small{
     width: 24px;
     height: 24px;
 }
 
-.stavatar.is-large{
+.stavatar.large{
     width: 48px;
     height: 48px;
 }
@@ -18194,27 +18168,27 @@ a.stsegment:hover{
     align-items: flex-end;
 }
 
-.stwrap.is-start-aligned{
+.stwrap.textleft{
     justify-content: flex-start;
 }
 
-.stwrap.is-center-aligned{
+.stwrap.textcenter{
     justify-content: center;
 }
 
-.stwrap.is-end-aligned{
+.stwrap.textright{
     justify-content: flex-end;
 }
 
-.stwrap.is-start-aligned.vertical{
+.stwrap.textleft.vertical{
     align-items: flex-start;
 }
 
-.stwrap.is-center-aligned.vertical{
+.stwrap.textcenter.vertical{
     align-items: center;
 }
 
-.stwrap.is-end-aligned.vertical{
+.stwrap.textright.vertical{
     align-items: flex-end;
 }
 
@@ -18372,7 +18346,7 @@ a.stsegment:hover{
   * Aligns
   */
 
-.stcontrol .label.is-start-aligned{
+.stcontrol .label.textleft{
     text-align: left;
 }
 
@@ -18545,11 +18519,11 @@ a.stsegment:hover{
   * Sizes
   */
 
-.stmenu.is-small{
+.stmenu.small{
     font-size: var(--stfont-size-14px);
 }
 
-.stmenu.is-large{
+.stmenu.large{
     font-size: var(--stfont-size-16px);
 }
 
@@ -18634,7 +18608,7 @@ a.stsegment:hover{
   * Negative
   */
 
-.stchecklist .item.is-negative::before{
+.stchecklist .item.negative::before{
     content: "\f00d";
     background: var(--sttonal-negative-400);
     color: var(--sttonal-negative-800);
@@ -19192,15 +19166,15 @@ a.stsegment:hover{
   * Sizes
   */
 
-.stmodal.is-small>.content{
+.stmodal.small>.content{
     width: 280px;
 }
 
-.stmodal.is-large>.content{
+.stmodal.large>.content{
     width: 580px;
 }
 
-.stmodal.is-big>.content{
+.stmodal.big>.content{
     width: 780px;
 }
 
@@ -19319,11 +19293,11 @@ a.stsegment:hover{
   * Sizes
   */
 
-.stgauge.is-small{
+.stgauge.small{
     --size: 4rem;
 }
 
-.stgauge.is-large{
+.stgauge.large{
     --size: 6rem;
 }
 
@@ -19579,11 +19553,11 @@ a.stsegment:hover{
   * Sizes
   */
 
-.stdropdown.is-small{
+.stdropdown.small{
     font-size: var(--stfont-size-13px);
 }
 
-.stdropdown.is-large{
+.stdropdown.large{
     font-size: var(--stfont-size-15px);
 }
 
@@ -20567,11 +20541,11 @@ html[data-background="secondary"],html[data-background="secondary"] body{
   * Sizes
   */
 
-.stapp-drawer.is-small>.content{
+.stapp-drawer.small>.content{
     width: 280px;
 }
 
-.stapp-drawer.is-large>.content{
+.stapp-drawer.large>.content{
     width: 580px;
 }
 
@@ -20745,12 +20719,12 @@ html[data-background="secondary"],html[data-background="secondary"] body{
   * Negative
   */
 
-.sttimeline>.item.is-negative .indicator .sticon{
+.sttimeline>.item.negative .indicator .sticon{
     background: var(--stnegative-500);
     color: var(--stwhite);
 }
 
-.sttimeline>.item.is-negative.is-secondary .indicator .sticon{
+.sttimeline>.item.negative.is-secondary .indicator .sticon{
     background: initial;
     color: var(--stnegative-500);
 }
@@ -20944,7 +20918,7 @@ html[data-background="secondary"],html[data-background="secondary"] body{
   * Sizes
   */
 
-.stblankslate.is-small{
+.stblankslate.small{
     --padding: 1.5rem;
     --icon-size: var(--stfont-size-45px);
     --header-font-size: var(--stfont-size-16px);
@@ -20954,7 +20928,7 @@ html[data-background="secondary"],html[data-background="secondary"] body{
     --icon-description-distance: var(--stspace-gap-small);
 }
 
-.stblankslate.is-large{
+.stblankslate.large{
     --icon-size: var(--stfont-size-65px);
     --header-font-size: var(--stfont-size-18px);
     --header-distance: var(--stspace-gap);
@@ -21614,15 +21588,15 @@ html[data-background="secondary"],html[data-background="secondary"] body{
   * Aligns
   */
 
-.strow.is-start-aligned{
+.strow.textleft{
     justify-content: flex-start;
 }
 
-.strow.is-center-aligned{
+.strow.textcenter{
     justify-content: center;
 }
 
-.strow.is-end-aligned{
+.strow.textright{
     justify-content: flex-end;
 }
 
@@ -21643,7 +21617,7 @@ html[data-background="secondary"],html[data-background="secondary"] body{
     display: flex;
 }
 
-.strow .column.is-center-aligned{
+.strow .column.textcenter{
     justify-content: center;
     display: flex;
 }
@@ -21653,11 +21627,11 @@ html[data-background="secondary"],html[data-background="secondary"] body{
     display: flex;
 }
 
-.strow .column.is-start-aligned{
+.strow .column.textleft{
     text-align: left;
 }
 
-.strow .column.is-end-aligned{
+.strow .column.textright{
     text-align: right;
 }
 
@@ -21730,19 +21704,19 @@ html[data-background="secondary"],html[data-background="secondary"] body{
   * Sizes
   */
 
-.stspace.is-small{
+.stspace.small{
     height: var(--stspace-gap-small);
 }
 
-.stspace.is-large{
+.stspace.large{
     height: var(--stspace-gap-large);
 }
 
-.stspace.is-big{
+.stspace.big{
     height: var(--stspace-gap-big);
 }
 
-.stspace.is-huge{
+.stspace.huge{
     height: var(--stspace-gap-huge);
 }
 
@@ -22089,6 +22063,11 @@ html[data-background="secondary"],html[data-background="secondary"] body{
 }
 
 
+.inline{
+    display: inline-block;
+}
+
+
 
 /*
 
@@ -22106,5 +22085,27 @@ html[data-background="secondary"],html[data-background="secondary"] body{
 .is-labeled              label
 .is-sttext.is-label      sttextlabel
 .is-outlined             outline
+.is-negative             negative
+.is-sttext.is-mark       mark
+.sttext.is-heavy         bold
+.is-loading              loading
+.is-start-aligned        textleft
+.is-center-aligned       textcenter
+.is-end-aligned          textright
+.is-tiny                 tiny
+.is-small                small
+.is-medium               medium
+.is-large                large
+.is-big                  big
+.is-huge                 huge
+.is-massive              massive
+
+-------------棄用-------------
+.sttext.is-uppercased    棄用
+.sttext.is-lowercased    棄用
+.sttext.is-bold          棄用
+
+-------------new-------------
+inline                   新增
 
 */

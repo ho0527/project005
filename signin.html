@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="light">
+<html>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -10,7 +10,7 @@
         <script src="/website/plugin/js/chrisplugin.js"></script>
         <script src="https://cdn.ckeditor.com/ckeditor5/16.0.0/classic/ckeditor.js"></script>
     </head>
-    <body>
+    <body class="light">
         <div class="navigationbar" id="navigationbar">
             <div class="navigationbarleft" id="title">
             <img src="material/icon/logo.png" class="logo">
@@ -37,9 +37,10 @@
                 <div class="sttextlabel">密碼</div>
                 <div class="stinput endicon underline">
                     <input type="text" id="password">
-                    <div class="sticon"><img src="/website/material/icon/eyeclose.svg" class="iconinputicon cursor_pointer" draggable="false"></div>
+                    <div class="sticon"><img src="/website/material/icon/eyeclose.svg" class="iconinputicon cursor_pointer" id="passwordicon" draggable="false"></div>
                 </div>
             </div>
+            <div class="sttext negative bold inputmargin" id="error"></div>
             <div class="center inputmargin">
                 <input type="button" class="stbutton outline inputbutton" id="signup" value="註冊">
                 <input type="button" class="stbutton outline inputbutton" id="submit" value="登入">
@@ -52,15 +53,15 @@
                     <img src="material/icon/logo.png" class="footerlogo">
                 </div>
                 <div class="footertop">
-                    <img src="material/picture/line.png" class="footericon"><br>
+                    <img src="material/picture/line.png" class="footericon">
                     wang00123
                 </div>
                 <div class="footertop">
-                    <img src="material/picture/mail.png" class="footericon"><br>
+                    <img src="material/picture/mail.png" class="footericon">
                     clelerver@gmail.com
                 </div>
                 <div class="footertop">
-                    <img src="material/picture/phone.png" class="footericon"><br>
+                    <img src="material/picture/phone.png" class="footericon">
                     0912252136
                 </div>
             </div>

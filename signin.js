@@ -6,7 +6,7 @@ docgetid("submit").onclick=function(){
             alert("登入成功")
             location.href="admin.html"
         }else{
-            alert("登入失敗: "+data["data"])
+            docgetid("error").innerHTML=data["data"]
         }
     },JSON.stringify({
         "username": docgetid("username").value,
@@ -26,7 +26,7 @@ docgetid("signup").onclick=function(){
             alert("註冊成功")
             location.href="admin.html"
         }else{
-            alert("註冊失敗: "+data["data"])
+            docgetid("error").innerHTML=data["data"]
         }
     },JSON.stringify({
         "username": docgetid("username").value,
@@ -39,5 +39,7 @@ document.onkeydown=function(event){
         docgetid("submit").click()
     }
 }
+
+passwordshowhide()
 
 startmacossection()

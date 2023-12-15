@@ -518,6 +518,7 @@ table{
 
 .producttitle{
     font-size: 25px;
+    text-align: center;
 }
 
 .productfunction{
@@ -619,6 +620,7 @@ table{
     position: relative;
     top: 120px;
     height: 75vh;
+    text-align: center;
 }
 
 .productdetailtop{
@@ -655,9 +657,9 @@ table{
 
 .error{
     position: absolute;
-    top: 50%;
+    top: 75%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-0%);
     color: red;
     font-size: 75px;
     font-weight: bold;
@@ -696,6 +698,7 @@ table{
 
 .footericon{
     max-height: 2.5vh;
+    display: block;
 }
 
 .footerbottom{
@@ -718,4 +721,23 @@ table{
 
 .inputbutton{
     border: 1px lightgray solid !important;
+}
+
+.maincoverdiv{
+    position: relative;
+}
+
+.maincovertext{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 35px;
+}
+
+.maincovertextdiv{
+    position: absolute;
+    top: 50px;
+    left: 75px;
+    width: 40vw;
 }
