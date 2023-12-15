@@ -727,17 +727,22 @@ table{
     position: relative;
 }
 
-.maincovertext{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 35px;
-}
-
 .maincovertextdiv{
     position: absolute;
     top: 50px;
-    left: 75px;
-    width: 40vw;
+    left: 50%;
+    transform: translate(-50%,-0%);
+    width: 45vw;
+}
+
+.maincovertitle{
+    font-size: 45px;
+}
+
+.maincoversecondary{
+    font-size: 30px;
+}
+
+.maincovertext{
+    font-size: 20px;
 }
