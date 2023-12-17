@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html class="mainlight">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="plugin/css/tocas.css">
         <link rel="stylesheet" href="/website/plugin/css/chrisplugin.css">
         <script src="/website/plugin/js/chrisplugin.js"></script>
     </head>
@@ -23,11 +24,24 @@
             </div>
         </div>
 
-        <div class="webknowledgemaindiv">
-            <div class="webknowledgefunction">
-                <input type="button" class="button" id="newpost" value="新增貼文">
+        <div class="webknowledgemaindiv macossectiondivy">
+            <div class="maincoverdiv">
+                <img src="design/yy.png" class="maincover">
+                <div class="maincovertextdiv">
+                    <div class="sttext maincovertitle bold">this is title</div>
+                    <div class="sttext maincoversecondary">this is prv</div><br>
+                    <div class="sttext maincovertext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptas porro accusamus temporibus? Deleniti dolorem aut, facilis asperiores quisqonsat porro ullam. Quae quidem fugit excepturi perspiciatis dolor sint.</div>
+                </div>
             </div>
-            <div class="webknowledgepostdiv macossectiondivy" id="post"></div>
+            <div class="webknowledgefunction">
+                <div class="stselect">
+                    <select id="select">
+                        <option value="ALL">全部</option>
+                    </select>
+                </div>
+                <input type="button" class="stbutton" id="newpost" value="新增貼文">
+            </div>
+            <div class="productpostdiv" id="post"></div>
         </div>
 
         <div class="footer">

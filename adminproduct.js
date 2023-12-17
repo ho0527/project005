@@ -1,8 +1,8 @@
 if(!weblsget("project005productsortby")){ weblsset("project005productsortby","all") }
 
-docgetall(".button").forEach(function(event){
+docgetall(".productbutton").forEach(function(event){
     if(event.dataset.id==weblsget("project005productsortby")){
-        event.classList.add("selectbutton")
+        event.classList.add("productbuttonselect")
     }
 })
 
@@ -33,6 +33,13 @@ ajax("GET","/backend/project005/getproductlist/"+weblsget("project005productsort
                 }
             })
         }
+    }
+})
+
+docgetall(".productbutton").forEach(function(event){
+    event.onclick=function(){
+        location.reload()
+        weblsset("project005productsortby",event.dataset.id)
     }
 })
 

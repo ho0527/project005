@@ -110,6 +110,10 @@ InlineEditor.create(docgetid("newposteditor"),{
 }).then(function(event){
     docgetid("submit").onclick=function(){
         if(cover&&title!=""){
+            let taglist=[]
+            docgetall("#selecttag>.tag").forEach(function(event){
+                taglist.push(event.dataset.name)
+            })
             ajax("POST","/backend/project005/newpost/",function(event){
                 let data=JSON.parse(event.responseText)
                 if(data["success"]){
@@ -120,7 +124,7 @@ InlineEditor.create(docgetid("newposteditor"),{
                 ["cover",cover],
                 ["title",docgetid("posttitle").value],
                 ["content",event.getData()],
-                ["tag",""],
+                ["tag",taglist.join("|&|")],
             ]),[])
         }else{
             alert("請填寫標題及上傳封面")
@@ -195,5 +199,21 @@ docgetid("signout").onclick=function(){
         ["Authorization","Bearer "+weblsget("project005token")]
     ])
 }
+
+ajax("GET","/backend/project005/taglist",function(event){
+    let data=JSON.parse(event.responseText)
+    tag("tagdiv",data["data"],function(value){
+        if(value!="|&|"&&value!="ALL"){
+            ajax("POST","/backend/project005/addtag",function(event){
+                let data=JSON.parse(event.responseText)
+                console.log(data)
+            },JSON.stringify({
+                "name": value
+            }))
+        }else{
+            alert("請勿輸入'|&|'或'ALL'")
+        }
+    })
+})
 
 startmacossection()

@@ -360,8 +360,7 @@ table{
     top: 100px;
     left: 50%;
     transform: translate(-50%,-0%);
-    height: 85vh;
-    width: 80vw;
+    height: 75vh;
 }
 
 .newpostfunction{
@@ -429,7 +428,7 @@ table{
 
 .webknowledgepostdiv{
     text-align: center;
-    margin-top: 20px;
+    margin: 20px 0px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -674,6 +673,7 @@ table{
     height: 10vh;
     background: whitesmoke;
     padding: 0px 5vw;
+    margin-top: 50px;
 }
 
 .footertopdiv{
@@ -730,7 +730,7 @@ table{
 .maincovertextdiv{
     position: absolute;
     top: 50px;
-    left: 50%;
+    left: calc(50% + 75px);
     transform: translate(-50%,-0%);
     width: 45vw;
 }
@@ -744,5 +744,16 @@ table{
 }
 
 .maincovertext{
+    font-size: 20px;
+}
+
+.tagcontrol{
+    width: 50% !important;
+    font-size: 20px;
+}
+
+.taglist{
+    width: 50% !important;
+    text-align: left;
     font-size: 20px;
 }
