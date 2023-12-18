@@ -360,7 +360,7 @@ table{
     top: 100px;
     left: 50%;
     transform: translate(-50%,-0%);
-    height: 75vh;
+    height: calc(100vh - 100px);
 }
 
 .newpostfunction{
@@ -486,7 +486,7 @@ table{
 
 .webknowledgefunction{
     position: sticky;
-    text-align: right;
+    text-align: center;
 }
 
 .maincover{
@@ -497,7 +497,7 @@ table{
 .productmaindiv{
     position: relative;
     top: 100px;
-    height: 75vh;
+    height: calc(100vh - 100px);
 }
 
 .productmain{
@@ -655,7 +655,7 @@ table{
 /* product END */
 
 .error{
-    position: absolute;
+    position: relative;
     top: 75%;
     left: 50%;
     transform: translate(-50%,-0%);
@@ -666,11 +666,9 @@ table{
 
 /* footer START */
 .footer{
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
+    position: relative;
     width: 100%;
-    height: 10vh;
+    height: 100px;
     background: whitesmoke;
     padding: 0px 5vw;
     margin-top: 50px;
@@ -678,7 +676,7 @@ table{
 
 .footertopdiv{
     width: 100%;
-    height: 5vh;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: left;
@@ -689,22 +687,22 @@ table{
     width: 15vw;
     text-align: left;
     font-size: 15px;
-    max-height: 5vh;
+    max-height: 50px;
 }
 
 .footerlogo{
-    max-height: 5vh;
+    max-height: 50px;
 }
 
 .footericon{
-    max-height: 2.5vh;
+    max-height: 25px;
     display: block;
 }
 
 .footerbottom{
     border-top: 1px black solid;
     width: 100%;
-    height: calc(5vh - 1px);
+    height: 49px;
     font-size: 15px;
     text-align: left;
 }
@@ -712,7 +710,7 @@ table{
 /* footer END */
 
 .loginmain{
-    width: 40vw;
+    width: 300px;
 }
 
 .inputmargin{

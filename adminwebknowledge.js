@@ -1,14 +1,15 @@
 function main(data){
-    docgetid("post").innerHTML=``
+    let scroll=docgetid("main").scrollTop
 
     ajax("GET","/backend/project005/getpostlist/"+data,function(event){
         let data=JSON.parse(event.responseText)
         if(data["success"]){
             let row=data["data"]
+            let innerhtml=``
             if(row.length>0){
                 for(let i=0;i<row.length;i=i+1){
-                    docgetid("post").innerHTML=`
-                        ${docgetid("post").innerHTML}
+                    innerhtml=`
+                        ${innerhtml}
                         <div class="webknowledgepost grid" data-id="${row[i][0]}">
                             <div class="webknowledgepostimagediv macossectiondivy"><img src="/backend/media/${row[i][1]}" class="webknowledgepostimage"></div>
                             <div class="webknowledgeposttitle macossectiondivy">${row[i][2]}</div>
@@ -16,6 +17,8 @@ function main(data){
                         </div>
                     `
                 }
+
+                docgetid("post").innerHTML=innerhtml
 
                 docgetall(".webknowledgepost").forEach(function(event){
                     event.onclick=function(){
@@ -28,6 +31,7 @@ function main(data){
                     <div class="error">查無資料</div>
                 `
             }
+            docgetid("main").scrollTop=scroll
         }
     })
 }
