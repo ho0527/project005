@@ -782,7 +782,7 @@ table{
     grid-row: 5/9;
 }
 
-.connectdescription{
+.connectcontent{
     grid-column: 1/50;
     grid-row: 9/14;
 }
