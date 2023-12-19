@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html class="mainlight">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="plugin/css/tocas.css">
+        <link rel="stylesheet" href="/website/plugin/css/chrisplugin.css">
+        <script src="/website/plugin/js/chrisplugin.js"></script>
+    </head>
+    <body>
+        <div class="navigationbar" id="navigationbar">
+            <div class="navigationbarleft" id="title">
+                <img src="material/icon/logo.png" class="logo">
+            </div>
+            <div class="navigationbarright">
+                <input type="button" class="navigationbarbutton" onclick="location.href='webknowledge.html'" value="公司簡介">
+                <input type="button" class="navigationbarbutton" onclick="location.href='webknowledge.html'" value="服務說明">
+                <input type="button" class="navigationbarbutton" onclick="location.href='product.html'" value="解決方案">
+                <input type="button" class="navigationbarbutton" onclick="location.href='webkcnowledge.html'" value="網站知識">
+                <input type="button" class="navigationbarbutton navigationbarselect" onclick="location.reload()" value="聯絡我們">
+                <input type="button" class="navigationbarbutton" onclick="location.href='signin.html'" value="登入後台">
+            </div>
+        </div>
+
+        <div class="webknowledgemaindiv macossectiondivy" id="main">
+            <div class="maincoverdiv">
+                <img src="design/yy.png" class="maincover">
+                <div class="maincovertextdiv">
+                    <div class="sttext maincovertitle bold">this is title</div>
+                    <div class="sttext maincoversecondary">this is prv</div><br>
+                    <div class="sttext maincovertext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptas porro accusamus temporibus? Deleniti dolorem aut, facilis asperiores quisqonsat porro ullam. Quae quidem fugit excepturi perspiciatis dolor sint.</div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="connectmain grid xcenter">
+                    <div class="inputmargin connectcompanyname">
+                        <div class="sttextlabel require">公司名稱</div>
+                        <div class="stinput underline">
+                            <input type="text" id="companyname">
+                        </div>
+                    </div>
+                    <div class="inputmargin connectname">
+                        <div class="sttextlabel require">姓名</div>
+                        <div class="stinput underline">
+                            <input type="text" id="name">
+                        </div>
+                    </div>
+                    <div class="inputmargin connectphone">
+                        <div class="sttextlabel require">連絡電話</div>
+                        <div class="stinput underline">
+                            <input type="text" id="phone">
+                        </div>
+                    </div>
+                    <div class="inputmargin connectemail">
+                        <div class="sttextlabel require">電子信箱</div>
+                        <div class="stinput underline">
+                            <input type="text" id="email">
+                        </div>
+                    </div>
+                    <div class="stinput connectdescription">
+                        <textarea id="description" placeholder="需求說明 *"></textarea>
+                    </div>
+                    <div class="sttext textcenter error bold inputmargin connecterror" id="error"></div>
+                    <input type="button" class="stbutton outline inputbutton fluid connectsubmit" id="submit" value="送出">
+                </div>
+            </div>
+        </div>
+
+        <script src="connect.js"></script>
+        <script src="signincheck.js"></script>
+    </body>
+</html>

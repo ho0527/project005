@@ -23,7 +23,7 @@ table{
     /* width: 100%;
     color: white; */
 }
-
+/*
 .main{
     border: 2px black solid;
     position: absolute;
@@ -33,7 +33,7 @@ table{
     font-size: 30px;
     padding: 20px;
     border-radius: 20px;
-}
+} */
 
 .grid{
     display: grid;
@@ -654,7 +654,7 @@ table{
 
 /* product END */
 
-.error{
+.bigerror{
     position: relative;
     top: 75%;
     left: 50%;
@@ -754,4 +754,45 @@ table{
     width: 50% !important;
     text-align: left;
     font-size: 20px;
+}
+
+/* connect START */
+.connectmain{
+    width: 80vw;
+    height: 400px;
+}
+
+.connectcompanyname{
+    grid-column: 1/50;
+    grid-row: 1/5;
+}
+
+.connectname{
+    grid-column: 50/101;
+    grid-row: 1/5;
+}
+
+.connectphone{
+    grid-column: 1/50;
+    grid-row: 5/9;
+}
+
+.connectemail{
+    grid-column: 50/101;
+    grid-row: 5/9;
+}
+
+.connectdescription{
+    grid-column: 1/50;
+    grid-row: 9/14;
+}
+
+.connecterror{
+    grid-column: 1/101;
+    grid-row: 14;
+}
+
+.connectsubmit{
+    grid-column: 1/101;
+    grid-row: 15/17;
 }

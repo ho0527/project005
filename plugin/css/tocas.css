@@ -1,5 +1,3 @@
-/* ================================================================================================================================================================== */
-
 html{
     --staccent-color: #5c79ff;
 }
@@ -11472,11 +11470,9 @@ button{
     user-select: none;
 }
 
-/**
-  * Required
-  */
+/* Required */
 
-.sttext.is-required::after{
+.require::after{
     content: " *";
     font-weight: bold;
     color: var(--stnegative-600);

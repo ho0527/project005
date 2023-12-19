@@ -28,7 +28,7 @@ function main(data){
                 })
             }else{
                 docgetid("post").innerHTML=`
-                    <div class="error">查無資料</div>
+                    <div class="bigerror">查無資料</div>
                 `
             }
             docgetid("main").scrollTop=scroll
