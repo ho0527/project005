@@ -760,7 +760,8 @@ table{
 /* connect START */
 .connectmain{
     width: 80vw;
-    height: 400px;
+    height: 60vh;
+    margin-top: 40px;
 }
 
 .connectcompanyname{
@@ -784,7 +785,7 @@ table{
 }
 
 .connectcontent{
-    grid-column: 1/50;
+    grid-column: 1/101;
     grid-row: 9/14;
 }
 

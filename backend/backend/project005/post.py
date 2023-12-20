@@ -50,13 +50,22 @@ def newpost(request):
         },status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 @api_view(["GET"])
-def getpostlist(request):
+def getpostlist(request,name):
     try:
-        row=query(db,"SELECT*FROM `post`")
+        data=[]
+        if name=="ALL":
+            data=query(db,"SELECT*FROM `post`")
+        else:
+            row=query(db,"SELECT*FROM `post`")
+            for i in range(len(row)):
+                tag=row[i][4].split("|&|")
+                for j in range(len(tag)):
+                    if tag[j]==name:
+                        data.append(row[i])
 
         return Response({
             "success": True,
-            "data": row
+            "data": data
         },status.HTTP_200_OK)
     except Exception as error:
         printcolorhaveline("fail","[ERROR] "+str(error),"")
@@ -80,6 +89,75 @@ def getpost(request,id):
                 "success": False,
                 "data": "post not found"
             },status.HTTP_404_NOT_FOUND)
+    except Exception as error:
+        printcolorhaveline("fail","[ERROR] "+str(error),"")
+        return Response({
+            "success": False,
+            "data": "[ERROR] unknow error pls tell the admin error:\n"+str(error)
+        },status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+@api_view(["POST"])
+def postuploadfile(request):
+    try:
+        covername=""
+        for i in range(30):
+            covername=covername+str("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"[random.randint(0,61)])
+
+        covername=covername+os.path.splitext(request.FILES["upload"].name)[1]
+        uploadfile("./upload/project005",request.FILES["upload"],covername)
+
+        return Response({
+            "success": True,
+            "url": "/backend/media/project005/"+covername
+        },status.HTTP_200_OK)
+    except Exception as error:
+        printcolorhaveline("fail","[ERROR] "+str(error),"")
+        return Response({
+            "success": False,
+            "data": "[ERROR] unknow error pls tell the admin error:\n"+str(error)
+        },status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+@api_view(["GET"])
+def gettaglist(request):
+    try:
+        row=query(db,"SELECT*FROM `posttag`")
+        data=[]
+
+        for i in range(len(row)):
+            data.append({
+                "id": row[i][0],
+                "name": row[i][1]
+            })
+
+        return Response({
+            "success": True,
+            "data": data
+        },status.HTTP_200_OK)
+    except Exception as error:
+        printcolorhaveline("fail","[ERROR] "+str(error),"")
+        return Response({
+            "success": False,
+            "data": "[ERROR] unknow error pls tell the admin error:\n"+str(error)
+        },status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+@api_view(["POST"])
+def addtag(request):
+    try:
+        data=json.loads(request.body)
+        name=data.get("name")
+        row=query(db,"SELECT*FROM `posttag` WHERE `name`=%s",[name])
+        if not row:
+            query(db,"INSERT INTO `posttag`(`name`)VALUES(%s)",[name])
+
+            return Response({
+                "success": True,
+                "data": ""
+            },status.HTTP_200_OK)
+        else:
+            return Response({
+                "success": False,
+                "data": "tag exist"
+            },status.HTTP_400_BAD_REQUEST)
     except Exception as error:
         printcolorhaveline("fail","[ERROR] "+str(error),"")
         return Response({
