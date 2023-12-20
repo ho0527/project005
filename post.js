@@ -14,8 +14,4 @@ ajax("GET","/backend/project005/getpost/"+weblsget("project005postid")+"/",funct
     console.log(data)
 })
 
-docgetid("title").onclick=function(){
-    location.href="index.html"
-}
-
 startmacossection()

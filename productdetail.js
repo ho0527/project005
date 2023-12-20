@@ -1,4 +1,4 @@
-ajax("GET","/backend/project005/getproduct/"+weblsget("project005productid"),function(event){
+ajax("GET",ajaxurl+"/getproduct/"+weblsget("project005productid"),function(event){
     let data=JSON.parse(event.responseText)
     docgetid("main").innerHTML=`
         <div class="productdetailtop">

@@ -1,3 +1,4 @@
+let ajaxurl="/backend/project005/"
 let html=location.href.split("project005/")[1]
 
 if(docgetid("navigationbar")){

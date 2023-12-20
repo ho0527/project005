@@ -114,7 +114,7 @@ InlineEditor.create(docgetid("newposteditor"),{
             docgetall("#selecttag>.tag").forEach(function(event){
                 taglist.push(event.dataset.name)
             })
-            ajax("POST","/backend/project005/newpost/",function(event){
+            ajax("POST",ajaxurl+"/newpost/",function(event){
                 let data=JSON.parse(event.responseText)
                 if(data["success"]){
                     alert("上傳成功")
@@ -186,7 +186,7 @@ docgetid("newposteditor").ondrop=function(){
 }
 
 docgetid("signout").onclick=function(){
-    ajax("POST","/backend/project005/signout/",function(event){
+    ajax("POST",ajaxurl+"/signout/",function(event){
         let data=JSON.parse(event.responseText)
         if(data["success"]){
             alert("登出成功")
@@ -200,11 +200,11 @@ docgetid("signout").onclick=function(){
     ])
 }
 
-ajax("GET","/backend/project005/taglist",function(event){
+ajax("GET",ajaxurl+"/taglist",function(event){
     let data=JSON.parse(event.responseText)
     tag("tagdiv",data["data"],function(value){
         if(value!="|&|"&&value!="ALL"){
-            ajax("POST","/backend/project005/addtag",function(event){
+            ajax("POST",ajaxurl+"/addtag",function(event){
                 let data=JSON.parse(event.responseText)
                 console.log(data)
             },JSON.stringify({

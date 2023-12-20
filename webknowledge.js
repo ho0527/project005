@@ -1,7 +1,7 @@
 function main(data){
     let scroll=docgetid("main").scrollTop
 
-    ajax("GET","/backend/project005/getpostlist/"+data,function(event){
+    ajax("GET",ajaxurl+"/getpostlist/"+data,function(event){
         let data=JSON.parse(event.responseText)
         if(data["success"]){
             let row=data["data"]
@@ -36,7 +36,7 @@ function main(data){
     })
 }
 
-ajax("GET","/backend/project005/taglist",function(event){
+ajax("GET",ajaxurl+"/taglist",function(event){
     let data=JSON.parse(event.responseText)
     if(data["success"]){
         let row=data["data"]

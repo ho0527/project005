@@ -1,5 +1,5 @@
 function main(){
-    ajax("GET","/backend/project005/getproductlist/"+weblsget("project005productsortby"),function(event){
+    ajax("GET",ajaxurl+"/getproductlist/"+weblsget("project005productsortby"),function(event){
         let data=JSON.parse(event.responseText)
         if(data["success"]){
             let row=data["data"]

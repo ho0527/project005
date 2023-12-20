@@ -24,7 +24,7 @@ docgetid("submit").onclick=function(){
     if(errorlist.length==0){
         if(!isupload){
             isupload=true
-            ajax("POST","/backend/project005/newconnect",function(event){
+            ajax("POST",ajaxurl+"/newconnect",function(event){
                 let data=JSON.parse(event.responseText)
                 if(data["success"]){
                     alert("上傳成功")

@@ -1,5 +1,5 @@
 docgetid("submit").onclick=function(){
-    ajax("POST","/backend/project005/signin/",function(event){
+    ajax("POST",ajaxurl+"/signin/",function(event){
         let data=JSON.parse(event.responseText)
         if(data["success"]){
             weblsset("project005token",data["data"])
@@ -19,7 +19,7 @@ docgetid("title").onclick=function(){
 }
 
 docgetid("signup").onclick=function(){
-    ajax("POST","/backend/project005/signup/",function(event){
+    ajax("POST",ajaxurl+"/signup/",function(event){
         let data=JSON.parse(event.responseText)
         if(data["success"]){
             weblsset("project005token",data["data"])

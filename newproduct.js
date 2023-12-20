@@ -87,7 +87,7 @@ InlineEditor.create(docgetid("newposteditor"),{
 }).then(function(event){
     docgetid("submit").onclick=function(){
         if(cover&&title!=""){
-            ajax("POST","/backend/project005/newproduct/",function(event){
+            ajax("POST",ajaxurl+"/newproduct/",function(event){
                 let data=JSON.parse(event.responseText)
                 if(data["success"]){
                     alert("上傳成功")
@@ -159,7 +159,7 @@ docgetid("newposteditor").ondrop=function(){
 }
 
 docgetid("signout").onclick=function(){
-    ajax("POST","/backend/project005/signout/",function(event){
+    ajax("POST",ajaxurl+"/signout/",function(event){
         let data=JSON.parse(event.responseText)
         if(data["success"]){
             alert("登出成功")
