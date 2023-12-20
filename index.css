@@ -135,9 +135,10 @@ table{
 }
 
 .center{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .xcenter{
@@ -617,8 +618,8 @@ table{
 
 .productdetailmain{
     position: relative;
-    top: 120px;
-    height: 75vh;
+    top: 100px;
+    height: calc(100vh - 100px);
     text-align: center;
 }
 
@@ -795,4 +796,10 @@ table{
 .connectsubmit{
     grid-column: 1/101;
     grid-row: 15/17;
+}
+
+.positionfixedbottom{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
 }

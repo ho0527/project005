@@ -54,8 +54,4 @@ ajax("GET","/backend/project005/taglist",function(event){
 
 main("ALL")
 
-docgetid("title").onclick=function(){
-    location.href="index.html"
-}
-
 startmacossection()

@@ -56,8 +56,4 @@ docgetall(".productbutton").forEach(function(event){
     }
 })
 
-docgetid("title").onclick=function(){
-    location.href="index.html"
-}
-
 startmacossection()

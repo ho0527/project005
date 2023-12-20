@@ -12,19 +12,8 @@
         <!-- <script src="https://example.com/ckfinder/ckfinder.js"></script> -->
     </head>
     <body>
-        <div class="navigationbar" id="navigationbar">
-            <div class="navigationbarleft" id="title">
-                <img src="material/icon/logo.png" class="logo">
-            </div>
-            <div class="navigationbarright">
-                <input type="button" class="navigationbarbutton" value="公司簡介">
-                <input type="button" class="navigationbarbutton" value="服務說明">
-                <input type="button" class="navigationbarbutton" onclick="location.href='adminproduct.html'" value="解決方案">
-                <input type="button" class="navigationbarbutton navigationbarselect" onclick="location.href='adminwebknowledge.html'" value="網站知識">
-                <input type="button" class="navigationbarbutton" value="聯絡我們">
-                <input type="button" class="navigationbarbutton" id="signout" value="登出">
-            </div>
-        </div>
+        <div class="navigationbar" id="navigationbar"></div>
+
         <div class="newpostmaindiv main">
             標題: <input type="text" class="input" id="posttitle"><br><br>
             <div class="newpostmain">
@@ -56,5 +45,6 @@
 
         <script src="newpost.js"></script>
         <script src="signincheck.js"></script>
+        <script src="initialization.js"></script>
     </body>
 </html>

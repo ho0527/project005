@@ -35,7 +35,7 @@ docgetid("submit").onclick=function(){
                 "name": docgetid("name").value,
                 "phone": docgetid("phone").value,
                 "email": docgetid("email").value,
-                "content": docgetid("content").innerHTML
+                "content": docgetid("content").value
             }))
         }
     }else{
