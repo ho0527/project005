@@ -363,20 +363,23 @@ function hintbox(endcallback=function(){},hintname=".hintdiv"){
     let hintcount=0
 
     docgetall(hintname).forEach(function(event){
+        event.style.position="relative"
         hintlist[parseInt(event.dataset.id)]=event
     })
 
     function clear(){
         for(let i=0;i<hintlist.length;i=i+1){
-            console.log(hintlist[i])
-            hintlist[i].innerHTML=``
+            if(docgetid("hintbox")){
+                docgetid("hintbox").remove()
+            }
         }
     }
 
     function main(){
         clear()
         hintlist[hintcount].innerHTML=`
-            <div class="hintbox">
+            ${hintlist[hintcount].innerHTML}
+            <div class="hintbox" id="hintbox">
                 <div class="hiintboxclose" id="chrispluginhintboxclear">X</div>
                 <div class="hiintboxbody">${hintlist[hintcount].dataset.body}</div>
                 <div class="hiintboxbuttondiv">
@@ -478,6 +481,73 @@ function login(
     docgetid("submit").onclick=submitfunction
 }
 
+function signin(
+    submitfunction=function(){},
+    navbar=`
+        <div class="navigationbar">
+            <div class="navigationbarleft">
+                <img src="/website/material/icon/mainicon.png" class="logo" draggable="false">
+                <div class="maintitle">title</div>
+            </div>
+            <div class="navigationbarright">
+            </div>
+        </div>
+    `,
+    center=`
+        <div class="main" id="loginmain">
+            <div class="iconinputdiv">
+                <div class="iconinputtext">帳號:</div>
+                <input type="text" class="iconiinputinput input" id="username">
+                <div class="iconinputicondiv"><img src="/website/material/icon/user.svg" class="iconinputicon" draggable="false"></div>
+            </div>
+            <div class="iconinputdiv">
+                <div class="iconinputtext">密碼:</div>
+                <input type="password" class="iconiinputinput input" id="password">
+                <div class="iconinputicondiv"><img src="/website/material/icon/eyeclose.svg" class="iconinputicon cursor_pointer" id="passwordicon" draggable="false"></div>
+            </div>
+            <input type="button" class="button" id="signup" value="註冊">
+            <input type="button" class="button" id="submit" value="登入"><br>
+        </div>
+    `,
+    footer=``
+){
+    docgetall("body")[0].innerHTML=`
+        ${navbar}
+        ${center}
+        ${footer}
+    `
+
+    docgetall(".iconinputdiv").forEach(function(event){
+        event.onclick=function(){
+            event.children[1].focus()
+        }
+    })
+
+    if(docgetid("passwordicon")){
+        if(weblsget("passwordshow")=="true"){
+            docgetid("passwordicon").src="/website/material/icon/eyeopen.svg"
+            docgetid("password").type="text"
+        }else{
+            docgetid("passwordicon").src="/website/material/icon/eyeclose.svg"
+            docgetid("password").type="password"
+        }
+
+        docgetid("passwordicon").onclick=function(){
+            if(weblsget("passwordshow")=="true"){
+                docgetid("passwordicon").src="/website/material/icon/eyeclose.svg"
+                docgetid("password").type="password"
+                weblsset("passwordshow","false")
+            }else{
+                docgetid("passwordicon").src="/website/material/icon/eyeopen.svg"
+                docgetid("password").type="text"
+                weblsset("passwordshow","true")
+            }
+        }
+    }
+
+    docgetid("submit").onclick=submitfunction
+}
+
 function smoothscroll(id){
     if(document.getElementById(id)){
         document.getElementById(id).scrollIntoView({ behavior: "smooth" })
@@ -494,7 +564,7 @@ function closelightbox(){
     },300)
 }
 
-function tag(tagdiv,taglist){
+function tag(tagdiv,taglist,newtag=function(){}){
     let tagset=new Set()
 
     function updatetaglist(){
@@ -594,6 +664,7 @@ function tag(tagdiv,taglist){
                     taglist.push({ id: taglist.length+1,name: value,color: "" })
                     updatetaglist()
                     selecttag(value)
+                    newtag(value)
                 }else{
                     selecttag(value)
                 }
@@ -627,4 +698,29 @@ window.onload=function(){
     if(docgetid("lightbox")){
         docgetid("lightbox").classList.add("lightboxmask")
     }
+}
+
+function passwordshowhide(url="/website/",id="passwordicon"){
+    if(docgetid(id)){
+        if(weblsget("passwordshow")=="true"){
+            docgetid(id).src=url+"material/icon/eyeopen.svg"
+            docgetid("password").type="text"
+        }else{
+            docgetid(id).src=url+"material/icon/eyeclose.svg"
+            docgetid("password").type="password"
+        }
+
+        docgetid(id).onclick=function(){
+            if(weblsget("passwordshow")=="true"){
+                docgetid(id).src=url+"material/icon/eyeclose.svg"
+                docgetid("password").type="password"
+                weblsset("passwordshow","false")
+            }else{
+                docgetid(id).src=url+"material/icon/eyeopen.svg"
+                docgetid("password").type="text"
+                weblsset("passwordshow","true")
+            }
+        }
+    }
+
 }
