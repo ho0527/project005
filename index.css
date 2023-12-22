@@ -804,3 +804,18 @@ table{
     bottom: 0px;
     left: 0px;
 }
+
+.servicemain{
+    width: 90vw;
+    margin: 150px 5vw 0px 5vw;
+    font-size: 15px;
+    /* height: calc(100vh - 100px); */
+}
+
+.servicetitle{
+    font-size: 50px;
+}
+
+.serviceblock{
+    margin: 75px 0px;
+}
