@@ -805,11 +805,19 @@ table{
     left: 0px;
 }
 
+/* service START */
 .servicemain{
-    width: 90vw;
-    margin: 150px 5vw 0px 5vw;
+    width: 100vw;
+    height: calc(100vh - 100px);
+    position: relative;
+    top: 100px;
     font-size: 15px;
-    /* height: calc(100vh - 100px); */
+}
+
+.servicediv{
+    width: 90vw;
+    margin: 50px 5vw 0px 5vw;
+    font-size: 15px;
 }
 
 .servicetitle{
@@ -819,3 +827,78 @@ table{
 .serviceblock{
     margin: 75px 0px;
 }
+
+.serviceblockmain{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.textbox{
+    width: 30%;
+    margin: 0px 5%;
+    padding: 0px 10px;
+}
+
+.serviceblockmainimage{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textboxnumber{
+    font-size: 75px;
+    font-weight: bold;
+}
+
+.textboxtitle{
+    font-size: 50px;
+    margin: 5px 0px;
+}
+
+.servicehr{
+    border: none;
+    width: 40px;
+    height: 3px;
+    background-color: black;
+    margin: 20px 0px;
+}
+
+.serviceblockfeature{
+    margin: 30px 0px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.serviceblockfeatureli{
+    position: relative;
+    width: calc(100% / 3.5);
+    list-style: none;
+    min-height: 1px;
+    margin: 0px 10px;
+}
+
+.serviceblockfeaturelidot{
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    display: block;
+}
+
+.serviceblockfeaturelititle{
+    font-size: 15px;
+    font-weight: normal;
+    margin: 0px;
+}
+
+.serviceblockfeaturedescription{
+    margin: 5px 0px;
+}
+/* service END */
