@@ -70,7 +70,7 @@ if(docgetid("navigationbar")){
     }
 
     docgetid("phonebar").onclick=function(){
-        if(docgetid("navbarbuttonlist").style.display=="flex"){
+        if(docgetid("navbarbuttonlist").style.display=="block"){
             docgetid("navbarbuttonlist").style.display="none"
             docgetid("phonebar").style.rotate="0deg"
         }else{
