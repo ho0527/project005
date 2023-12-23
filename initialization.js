@@ -8,12 +8,19 @@ if(docgetid("navigationbar")){
                 <img src="material/icon/logo.png" class="logo">
             </div>
             <div class="navigationbarright">
-                <input type="button" class="navigationbarbutton" id="" onclick="" value="公司簡介">
-                <input type="button" class="navigationbarbutton" id="" onclick="" value="服務說明">
-                <input type="button" class="navigationbarbutton" id="adminproduct.html" onclick="location.href='adminproduct.html'" value="解決方案">
-                <input type="button" class="navigationbarbutton" id="adminwebknowledge.html" onclick="location.href='adminwebknowledge.html'" value="網站知識">
-                <input type="button" class="navigationbarbutton" id="" onclick="" value="聯絡我們">
-                <input type="button" class="navigationbarbutton" id="signout" value="登出">
+                <div class="navigationbarrightphonebar" id="phonebar">
+                    <div class="navigationbarrightphonebarline"></div>
+                    <div class="navigationbarrightphonebarline"></div>
+                    <div class="navigationbarrightphonebarline"></div>
+                </div>
+                <div class="navigationbarrightbuttonlist">
+                    <input type="button" class="navigationbarbutton" id="" onclick="" value="公司簡介">
+                    <input type="button" class="navigationbarbutton" id="" onclick="" value="服務說明">
+                    <input type="button" class="navigationbarbutton" id="adminproduct.html" onclick="location.href='adminproduct.html'" value="解決方案">
+                    <input type="button" class="navigationbarbutton" id="adminwebknowledge.html" onclick="location.href='adminwebknowledge.html'" value="網站知識">
+                    <input type="button" class="navigationbarbutton" id="" onclick="" value="聯絡我們">
+                    <input type="button" class="navigationbarbutton" id="signout" value="登出">
+                </div>
             </div>
         `
         docgetid("title").onclick=function(){
@@ -40,18 +47,38 @@ if(docgetid("navigationbar")){
                 <img src="material/icon/logo.png" class="logo">
             </div>
             <div class="navigationbarright">
-                <input type="button" class="navigationbarbutton" id="introduction.html" onclick="location.href='introduction.html'" value="公司簡介">
-                <input type="button" class="navigationbarbutton" id="service.html" onclick="location.href='service.html'" value="服務說明">
-                <input type="button" class="navigationbarbutton" id="product.html" onclick="location.href='product.html'" value="解決方案">
-                <input type="button" class="navigationbarbutton" id="webknowledge.html" onclick="location.href='webknowledge.html'" value="網站知識">
-                <input type="button" class="navigationbarbutton" id="connect.html" onclick="location.href='connect.html'" value="聯絡我們">
-                <input type="button" class="navigationbarbutton" id="signin.html" onclick="location.href='signin.html'" value="登入後台">
+                <div class="navigationbarrightphonebar" id="phonebar">
+                    <div class="navigationbarrightphonebarline"></div>
+                    <div class="navigationbarrightphonebarline"></div>
+                    <div class="navigationbarrightphonebarline"></div>
+                </div>
+                <div class="navigationbarrightbuttonlist" id="navbarbuttonlist">
+                    <div class="navigationbarrightbuttonlistposition">
+                        <input type="button" class="navigationbarbutton" id="introduction.html" onclick="location.href='introduction.html'" value="公司簡介">
+                        <input type="button" class="navigationbarbutton" id="service.html" onclick="location.href='service.html'" value="服務說明">
+                        <input type="button" class="navigationbarbutton" id="product.html" onclick="location.href='product.html'" value="解決方案">
+                        <input type="button" class="navigationbarbutton" id="webknowledge.html" onclick="location.href='webknowledge.html'" value="網站知識">
+                        <input type="button" class="navigationbarbutton" id="connect.html" onclick="location.href='connect.html'" value="聯絡我們">
+                        <input type="button" class="navigationbarbutton" id="signin.html" onclick="location.href='signin.html'" value="登入後台">
+                    </div>
+                </div>
             </div>
         `
         docgetid("title").onclick=function(){
             location.href="index.html"
         }
     }
+
+    docgetid("phonebar").onclick=function(){
+        if(docgetid("navbarbuttonlist").style.display=="flex"){
+            docgetid("navbarbuttonlist").style.display="none"
+            docgetid("phonebar").style.rotate="0deg"
+        }else{
+            docgetid("navbarbuttonlist").style.display="block"
+            docgetid("phonebar").style.rotate="90deg"
+        }
+    }
+
     if(docgetid(html)){
         docgetid(html).onclick=function(){
             location.reload()
