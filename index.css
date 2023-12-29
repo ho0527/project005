@@ -661,10 +661,6 @@ table{
 /* product END */
 
 .bigerror{
-    position: relative;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%,-0%);
     color: red;
     font-size: 75px;
     font-weight: bold;
