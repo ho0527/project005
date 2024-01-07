@@ -112,3 +112,5 @@ if(docgetid("footer")){
         </div>
     `
 }
+
+startmacossection()

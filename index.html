@@ -1,15 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html class="mainlight">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="plugin/css/tocas.css">
         <link rel="stylesheet" href="plugin/css/chrisplugin.css">
         <script src="plugin/js/chrisplugin.js"></script>
     </head>
     <body>
-        <div class="navigationbar" id="navigationbar"></div>
+        <div class="indexnavigationbar">
+            <div class="navigationbarleft">
+                <img src="material/icon/logo.png" class="logo">
+            </div>
+        </div>
+
+        <div class="slider">
+            <input type="button" class="silderbutton" id="prev" value="<">
+            <div class="slidershow" id="slidershow"><img src="material/icon/mainicon.png" class="slidershowimage"></div>
+            <input type="button" class="silderbutton" id="next" value=">">
+		</div>
+
+        <div class="indexproductintroduction">
+            <div class="indexproductintroductiontitle">產品介紹</div>
+            <div class="indexproductintroductionproductdiv">
+                <div class="indexproductintroductionproduct macossectiondivy">
+                    <div class="indexproductintroductionproductimagediv">
+                        <img src="material/icon/logo.png" class="indexproductintroductionproductimagedivimage">\
+                    </div>
+                    <div class="indexproductintroductionproducttitle">標題一</div>
+                    <div class="indexproductintroductionproducttagdiv">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                    </div>
+                </div>
+                <div class="indexproductintroductionproduct macossectiondivy">
+                    <div class="indexproductintroductionproductimagediv">
+                        <img src="material/icon/logo.png" class="indexproductintroductionproductimagedivimage">\
+                    </div>
+                    <div class="indexproductintroductionproducttitle">標題二</div>
+                    <div class="indexproductintroductionproducttagdiv">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                    </div>
+                </div>
+                <div class="indexproductintroductionproduct macossectiondivy">
+                    <div class="indexproductintroductionproductimagediv">
+                        <img src="material/icon/logo.png" class="indexproductintroductionproductimagedivimage">\
+                    </div>
+                    <div class="indexproductintroductionproducttitle">標題三</div>
+                    <div class="indexproductintroductionproducttagdiv">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                        <input type="button" class="indexproductintroductionproducttag" value="test tag">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="indexadvantage">
+            <div class="indexadvantagetitle">ADVANTAGES-</div>
+            <div class="indexadvantagemain"></div>
+        </div>
+
+        <div class="indexproduct">
+            <div class="indexproducttitle">成功案例</div>
+            <div class="indexproductmain"></div>
+            <div class="indexproductbuttondiv">
+                <input type="button" class="indexproductbutton" onclick="location.href='product.html'" value="更多成功案例">
+            </div>
+        </div>
+
+        <div class="indexconnect">
+            <input type="button" class="indexconnectbutton" onclick="location.href='connect.html'" value="聯絡我們">
+            <div class="indexconnecttextdiv">
+                <div class="indexconnecttitle">專人為您服務</div>
+                <div class="indexconnecttext">交給我們來解決您的需求及問題</div>
+            </div>
+        </div>
 
         <script src="initialization.js"></script>
         <script src="index.js"></script>

@@ -1056,3 +1056,186 @@ table{
     text-align: center;
     margin-top: 15px;
 }
+
+.indexnavigationbar{
+    position: relative;
+    height: 100px;
+}
+
+.slider{
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.silderbutton{
+    border: none;
+    background: none;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+
+.slidershow{
+    width: 90%;
+    height: 100%;
+    text-align: center;
+}
+
+.slidershowimage{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.indexproductintroduction{
+    background: black;
+    height: 55vh;
+    text-align: center;
+    padding: 5px 20px;
+    margin: 20px 0px 0px 0px;
+}
+
+.indexproductintroductiontitle{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.indexproductintroductionproductdiv{
+    height: 45vh;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.indexproductintroductionproduct{
+    background: white;
+    width: 20vw;
+    height: 90%;
+    margin: 0px 10px;
+}
+
+.indexproductintroductionproductimagediv{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.indexproductintroductionproductimagedivimage{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.indexproductintroductionproducttitle{
+    width: 100%;
+    font-weight: bold;
+    margin: 10px 0px;
+}
+
+.indexproductintroductionproducttagdiv{
+    width: 100%;
+    text-align: left;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.indexproductintroductionproducttag{
+    width: 45%;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.indexadvantage{
+    background: gray;
+    border-radius: 30px 30px 0px 0px;
+    padding: 20px;
+    margin: 20px 0px 0px 0px;
+}
+
+.indexadvantagetitle{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0px 0px 0px 15px;
+}
+
+.indexadvantagemain{
+    background: white;
+    width: 100%;
+    height: 35vh;
+    margin: 5px 0px 0px 0px;
+}
+
+.indexproduct{
+    background: gray;
+    padding: 20px 20vw;
+    margin: 20px 0px 0px 0px;
+}
+
+.indexproducttitle{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.indexproductmain{
+    background: white;
+    width: 100%;
+    height: 35vh;
+    margin: 5px 0px 0px 0px;
+}
+
+.indexproductbuttondiv{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.indexproductbutton{
+    border: none;
+    background: pink;
+    width: 280px;
+    font-size: 20px;
+    padding: 0px 2px;
+    cursor: pointer;
+}
+
+.indexconnect{
+    background: rgb(0, 37, 250);
+    height: 20vh;
+    margin: 20px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.indexconnectbutton{
+    border: none;
+    background: pink;
+    width: 280px;
+    font-size: 20px;
+    padding: 0px 2px;
+    cursor: pointer;
+}
+
+.indexconnecttextdiv{
+    width: 210px;
+    text-align: center;
+    margin-left: 25px;
+}
+
+.indexconnecttitle{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.indexconnecttext{
+    color: white;
+}
