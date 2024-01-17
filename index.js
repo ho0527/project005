@@ -5,17 +5,18 @@ function main(){
             let row=data["data"]
             if(row.length>0){
                 let innerhtml=``
-                for(let i=0;i<row.length;i++){
-                    innerhtml=`
-                        ${innerhtml}
-                        <div class="productpost grid" data-id="${row[i][0]}">
-                            <div class="productpostimagediv"><img src="/backend/media/${row[i][1]}" class="productpostimage"></div>
-                            <div class="productposttitle macossectiondivy">${row[i][2]}</div>
-                        </div>
-                    `
-                }
 
-                docgetid("indexproductmain").innerHTML=innerhtml
+                row=row[0]
+
+                innerhtml=`
+                    ${innerhtml}
+                    <div class="productpost grid" data-id="${row[0]}">
+                        <div class="productpostimagediv"><img src="/backend/media/${row[1]}" class="productpostimage"></div>
+                        <div class="productposttitle macossectiondivy">${row[2]}</div>
+                    </div>
+                `
+
+                docgetid("indexproductmain").innerHTML=docgetid("indexproductmain").innerHTML+innerhtml
 
                 docgetall(".productpost").forEach(function(event){
                     event.onclick=function(){
@@ -23,12 +24,64 @@ function main(){
                         weblsset("project005productid",event.dataset.id)
                     }
                 })
-            }else{
-                docgetid("post").innerHTML=`
-                    <div class="bigerror">查無資料</div>
-                `
             }
         }
+        ajax("GET",ajaxurl+"/getproductlist/commercializeapp",function(event){
+            let data=JSON.parse(event.responseText)
+            if(data["success"]){
+                let row=data["data"]
+                if(row.length>0){
+                    let innerhtml=``
+
+                    row=row[0]
+
+                    innerhtml=`
+                        ${innerhtml}
+                        <div class="productpost grid" data-id="${row[0]}">
+                            <div class="productpostimagediv"><img src="/backend/media/${row[1]}" class="productpostimage"></div>
+                            <div class="productposttitle macossectiondivy">${row[2]}</div>
+                        </div>
+                    `
+
+                    docgetid("indexproductmain").innerHTML=docgetid("indexproductmain").innerHTML+innerhtml
+
+                    docgetall(".productpost").forEach(function(event){
+                        event.onclick=function(){
+                            location.href="productdetail.html"
+                            weblsset("project005productid",event.dataset.id)
+                        }
+                    })
+                }
+            }
+            ajax("GET",ajaxurl+"/getproductlist/personalizeapp",function(event){
+                let data=JSON.parse(event.responseText)
+                if(data["success"]){
+                    let row=data["data"]
+                    if(row.length>0){
+                        let innerhtml=``
+
+                        row=row[0]
+
+                        innerhtml=`
+                            ${innerhtml}
+                            <div class="productpost grid" data-id="${row[0]}">
+                                <div class="productpostimagediv"><img src="/backend/media/${row[1]}" class="productpostimage"></div>
+                                <div class="productposttitle macossectiondivy">${row[2]}</div>
+                            </div>
+                        `
+
+                        docgetid("indexproductmain").innerHTML=docgetid("indexproductmain").innerHTML+innerhtml
+
+                        docgetall(".productpost").forEach(function(event){
+                            event.onclick=function(){
+                                location.href="productdetail.html"
+                                weblsset("project005productid",event.dataset.id)
+                            }
+                        })
+                    }
+                }
+            })
+        })
     })
 }
 

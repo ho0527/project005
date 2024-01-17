@@ -54,10 +54,11 @@ if(docgetid("navigationbar")){
                 </div>
                 <div class="navigationbarrightbuttonlist" id="navbarbuttonlist">
                     <div class="navigationbarrightbuttonlistposition">
+                        <input type="button" class="navigationbarbutton" id="index.html" onclick="location.href='index.html'" value="首頁">
                         <input type="button" class="navigationbarbutton" id="introduction.html" onclick="location.href='introduction.html'" value="公司簡介">
                         <input type="button" class="navigationbarbutton" id="service.html" onclick="location.href='service.html'" value="服務說明">
                         <input type="button" class="navigationbarbutton" id="product.html" onclick="location.href='product.html'" value="解決方案">
-                        <input type="button" class="navigationbarbutton" id="webknowledge.html" onclick="location.href='webknowledge.html'" value="網站知識">
+                        <input type="button" class="navigationbarbutton" id="webknowledge.html" onclick="location.href='webknowledge.html'" value="技術分享">
                         <input type="button" class="navigationbarbutton" id="connect.html" onclick="location.href='connect.html'" value="聯絡我們">
                         <input type="button" class="navigationbarbutton" id="signin.html" onclick="location.href='signin.html'" value="登入後台">
                     </div>

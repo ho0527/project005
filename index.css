@@ -3,7 +3,7 @@ body{
     /* background: rgb(238, 245, 248); */
     color: black;
     /* text-align: center; */
-    word-break: break-all;
+    /* word-break: break-all; */
     /* -webkit-user-select: none;
     user-select: none; */
     padding: 0px;
@@ -1059,7 +1059,7 @@ table{
 
 .indexnavigationbar{
     position: relative;
-    height: 100px;
+    height: 75px;
 }
 
 .slider{
@@ -1091,7 +1091,7 @@ table{
 
 .indexproductintroduction{
     background: black;
-    height: 55vh;
+    height: 500px;
     text-align: center;
     padding: 5px 20px;
     margin: 20px 0px 0px 0px;
@@ -1105,8 +1105,8 @@ table{
 }
 
 .indexproductintroductionproductdiv{
-    height: 45vh;
-    margin-top: 10px;
+    height: 425px;
+    margin: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1114,22 +1114,22 @@ table{
 
 .indexproductintroductionproduct{
     background: white;
-    width: 20vw;
-    height: 90%;
+    width: 290px;
+    height: 385px;
     margin: 0px 10px;
 }
 
 .indexproductintroductionproductimagediv{
+    position: absolute;
     width: 100%;
-    height: 30%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .indexproductintroductionproductimagedivimage{
-    max-width: 100%;
-    max-height: 100%;
+    height: 100%;
 }
 
 .indexproductintroductionproducttitle{
@@ -1138,20 +1138,13 @@ table{
     margin: 10px 0px;
 }
 
-.indexproductintroductionproducttagdiv{
+.indexproductintroductionproductdescriptiondiv{
     width: 100%;
-    text-align: left;
+    text-align: justify;
     padding: 0px 10px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-}
-
-.indexproductintroductionproducttag{
-    width: 45%;
-    height: 50px;
-    margin: 5px;
-    cursor: pointer;
 }
 
 .indexadvantage{
@@ -1176,7 +1169,7 @@ table{
 
 .indexproduct{
     background: gray;
-    padding: 20px 20vw;
+    padding: 20px 5vw;
     margin: 20px 0px 0px 0px;
 }
 
@@ -1188,8 +1181,11 @@ table{
 .indexproductmain{
     background: white;
     width: 100%;
-    height: 35vh;
+    height: 280px;
     margin: 5px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .indexproductbuttondiv{
