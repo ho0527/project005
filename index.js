@@ -1,3 +1,10 @@
+let carouselcount=0
+let slides=domgetall(".carouselcontent")
+let timer=setInterval(function(){
+    carouselcount=carouselcount+1
+    carouselmove()
+},3000)
+
 function main(){
     ajax("GET",ajaxurl+"/getproductlist/system",function(event){
         let data=JSON.parse(event.responseText)
@@ -85,6 +92,24 @@ function main(){
     })
 }
 
+function carouselmove(){
+    if(carouselcount>=slides.length){
+        carouselcount=0
+    }
+
+    if(carouselcount<0){
+        carouselcount=slides.length-1
+    }
+
+    for(let i=0;i<slides.length;i=i+1){
+        slides[i].style.display="none"
+    }
+
+    slides[carouselcount].style.display="flex"
+}
+
+// ====================================================================================================
+
 if(!weblsget("project005productsortby")){ weblsset("project005productsortby","all") }
 
 docgetall(".productbutton").forEach(function(event){
@@ -107,6 +132,16 @@ docgetall(".productbutton").forEach(function(event){
             }
         })
     }
+})
+
+onclick("#prev",function(element,event){
+    carouselcount=carouselcount-1
+    carouselmove()
+})
+
+onclick("#next",function(element,event){
+    carouselcount=carouselcount+1
+    carouselmove()
 })
 
 startmacossection()
