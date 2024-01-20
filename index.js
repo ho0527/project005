@@ -1,9 +1,6 @@
 let carouselcount=0
 let slides=domgetall(".carouselcontent")
-let timer=setInterval(function(){
-    carouselcount=carouselcount+1
-    carouselmove()
-},3000)
+let carouseltime=0
 
 function main(){
     ajax("GET",ajaxurl+"/getproductlist/system",function(event){
@@ -112,6 +109,10 @@ function carouselmove(){
 
 if(!weblsget("project005productsortby")){ weblsset("project005productsortby","all") }
 
+setInterval(function(){
+    carouseltime=carouseltime+1
+},500)
+
 docgetall(".productbutton").forEach(function(event){
     if(event.dataset.id==weblsget("project005productsortby")){
         event.classList.add("productbuttonselect")
@@ -143,5 +144,13 @@ onclick("#next",function(element,event){
     carouselcount=carouselcount+1
     carouselmove()
 })
+
+setInterval(function(){
+    if(carouseltime==7){
+        carouselcount=carouselcount+1
+        carouselmove()
+        carouseltime=0
+    }
+},10)
 
 startmacossection()

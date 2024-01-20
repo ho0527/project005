@@ -938,16 +938,19 @@ table{
         padding: 5px;
         display: none;
         background: whitesmoke;
+        z-index: 900;
     }
 
     .navigationbarrightbuttonlistposition{
         height: 360px;
         display: flex;
         flex-wrap: wrap;
+        z-index: 900;
     }
 
     .navigationbarrightbuttonlistposition>.navigationbarbutton{
         width: 95%;
+        z-index: 900;
     }
 
     .maincoverdiv{
