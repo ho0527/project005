@@ -4,18 +4,15 @@ function main(){
         if(data["success"]){
             let row=data["data"]
             if(row.length>0){
-                let innerhtml=``
                 for(let i=0;i<row.length;i++){
-                    innerhtml=`
-                        ${innerhtml}
+                    docgetid("post").innerHTML=`
+                        ${docgetid("post").innerHTML}
                         <div class="productpost grid" data-id="${row[i][0]}">
                             <div class="productpostimagediv"><img src="/backend/media/${row[i][1]}" class="productpostimage"></div>
                             <div class="productposttitle macossectiondivy">${row[i][2]}</div>
                         </div>
                     `
                 }
-
-                docgetid("post").innerHTML=innerhtml
 
                 docgetall(".productpost").forEach(function(event){
                     event.onclick=function(){

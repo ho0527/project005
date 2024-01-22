@@ -1,5 +1,5 @@
 let carouselcount=0
-let slides=domgetall(".carouselcontent")
+let slide=domgetall(".carouselcontent")
 let carouseltime=0
 
 function main(){
@@ -90,24 +90,28 @@ function main(){
 }
 
 function carouselmove(){
-    if(carouselcount>=slides.length){
+    if(carouselcount>=slide.length){
         carouselcount=0
     }
 
     if(carouselcount<0){
-        carouselcount=slides.length-1
+        carouselcount=slide.length-1
     }
 
-    for(let i=0;i<slides.length;i=i+1){
-        slides[i].style.display="none"
+    for(let i=0;i<slide.length;i=i+1){
+        slide[i].style.display="none"
     }
 
-    slides[carouselcount].style.display="flex"
+    slide[carouselcount].style.display="flex"
 }
 
 // ====================================================================================================
 
 if(!weblsget("project005productsortby")){ weblsset("project005productsortby","all") }
+
+for(let i=1;i<slide.length;i=i+1){
+    slide[i].style.display="none"
+}
 
 setInterval(function(){
     carouseltime=carouseltime+1
