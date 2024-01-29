@@ -1098,7 +1098,7 @@ table{
 }
 
 .indexproductintroduction{
-    background: black;
+    background: lightblue;
     height: 500px;
     text-align: center;
     padding: 5px 20px;
@@ -1109,7 +1109,7 @@ table{
     color: white;
     text-align: center;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .indexproductintroductionproductdiv{
@@ -1156,7 +1156,7 @@ table{
 }
 
 .indexadvantage{
-    background: gray;
+    background: rgba(238, 238, 238, 0.95);
     border-radius: 30px 30px 0px 0px;
     padding: 20px;
     margin: 20px 0px 0px 0px;
@@ -1165,6 +1165,7 @@ table{
 .indexadvantagetitle{
     font-size: 30px;
     font-weight: bold;
+    text-align: center;
     padding: 0px 0px 0px 15px;
 }
 
@@ -1172,7 +1173,7 @@ table{
     background: white;
     width: 100%;
     height: 350px;
-    padding: 5px 0px5;
+    padding: 5px 0px;
     margin: 5px 0px 0px 0px;
     display: flex;
     align-items: center;
@@ -1180,12 +1181,14 @@ table{
 }
 
 .indexproduct{
-    background: gray;
+    background: lightblue;
     padding: 20px 5vw;
     margin: 20px 0px 0px 0px;
 }
 
 .indexproducttitle{
+    color: white;
+    text-align: center;
     font-size: 30px;
     font-weight: bold;
 }
@@ -1215,9 +1218,18 @@ table{
 }
 
 .indexconnect{
-    background: rgb(0, 37, 250);
-    height: 20vh;
-    margin: 20px 0px 0px 0px;
+    position: relative;
+    /* background: rgb(0, 37, 250); */
+    width: 100vw;
+    /* height: auto; */
+    /* margin: 20px 0px 0px 0px; */
+}
+
+.indexconnectmain{
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translate(-0%,-50%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1226,7 +1238,7 @@ table{
 .indexconnectbutton{
     border: none;
     background: pink;
-    width: 280px;
+    width: 225px;
     font-size: 20px;
     padding: 0px 2px;
     cursor: pointer;
@@ -1294,4 +1306,9 @@ table{
 .indexmain{
     position: relative;
     height: calc(100vh - 75px);
+}
+
+.image{
+    max-width: 100%;
+    max-height: 100%;
 }
