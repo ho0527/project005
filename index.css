@@ -730,22 +730,35 @@ table{
 
 .maincovertextdiv{
     position: absolute;
-    top: 50px;
-    left: calc(50% + 75px);
-    transform: translate(-50%, -0%);
-    width: 45vw;
+    top: 50%;
+    left: 0px;
+    transform: translate(-0%, -50%);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .maincovertitle{
-    font-size: 45px;
+    width: 100%;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .maincoversecondary{
+    width: 120px;
     font-size: 30px;
+    text-align: center;
+    margin-left: 150px;
 }
 
 .maincovertext{
+    width: 670px;
     font-size: 20px;
+    text-align: justify;
+    margin-left: 40px;
 }
 
 .tagcontrol{
@@ -905,150 +918,6 @@ table{
 }
 /* service END */
 
-/* ----------------- RWD ----------------- */
-@media screen and (max-width: 1000px){
-    .navigationbar{
-        height: 75px !important;
-    }
-
-    .navigationbarrightphonebar{
-        width: 50px;
-        height: 40px;
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: space-between;
-        cursor: pointer;
-        transition: 0.25s linear;
-    }
-
-    .navigationbarrightphonebarline{
-        width: 100%;
-        height: 3px;
-        background: black;
-    }
-
-    .navigationbarrightbuttonlist{
-        position: absolute;
-        right: -5px;
-        top: 55px;
-        width: 60vw;
-        height: 80vh;
-        margin: 0px 15px;
-        padding: 5px;
-        display: none;
-        background: whitesmoke;
-        z-index: 900;
-    }
-
-    .navigationbarrightbuttonlistposition{
-        height: 360px;
-        display: flex;
-        flex-wrap: wrap;
-        z-index: 900;
-    }
-
-    .navigationbarrightbuttonlistposition>.navigationbarbutton{
-        width: 95%;
-        z-index: 900;
-    }
-
-    .maincoverdiv{
-        overflow: hidden;
-    }
-
-    .maincover{
-        min-height: 40vh;
-        width: 200% !important;
-    }
-
-    .maincovertextdiv{
-        top: 20px !important;
-        left: 0px !important;
-        transform: translate(-0%, -0%) !important;
-        width: 100% !important;
-    }
-
-    /* .maincovertext{
-        display: none;
-    } */
-
-    .productpost{
-        width: 100% !important;
-    }
-
-    .webknowledgepost{
-        width: 100% !important;
-    }
-
-    /*
-    .productpostimage{
-        max-width: initial !important;
-    } */
-
-    .productmaindiv{
-        top: 75px !important;
-    }
-
-    .webknowledgemaindiv{
-        top: 75px !important;
-    }
-
-    /* footer START */
-    .footer{
-        position: relative;
-        width: 100%;
-        height: 25vh;
-        background: whitesmoke;
-        padding: 0px 5vw;
-        margin-top: 50px;
-    }
-
-    .footertopdiv{
-        width: 100%;
-        height: 20vh;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    .footertop{
-        position: relative;
-        width: 90vw;
-        text-align: center;
-        font-size: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .footerlogo{
-        max-height: 50px;
-    }
-
-    .footericon{
-        max-height: 25px;
-        display: inline-block;
-        margin-right: 10px;
-    }
-
-    .footerbottom{
-        border-top: 1px black solid;
-        width: 100%;
-        height: 49px;
-        font-size: 15px;
-        text-align: left;
-    }
-
-    /* footer END */
-}
-
-@media screen and (min-width: 1000px){
-    .navigationbarrightphonebar{
-        display: none;
-    }
-}
-
 .introductiontext{
     margin-top: 15px;
     padding: 0px 25%;
@@ -1123,7 +992,7 @@ table{
 .indexproductintroductionproduct{
     background: white;
     width: 290px;
-    height: 385px;
+    height: 400px;
     margin: 0px 10px;
 }
 
@@ -1158,7 +1027,7 @@ table{
 .indexadvantage{
     background: rgba(230, 230, 230, 0.95);
     /* border-radius: 30px 30px 0px 0px; */
-    padding: 0px 20px 20px 20px;
+    padding: 10px 20px;
     /* margin: 20px 0px 0px 0px; */
 }
 
@@ -1172,7 +1041,7 @@ table{
 .indexadvantagemain{
     background: white;
     width: 100%;
-    height: 350px;
+    height: initial;
     padding: 5px 0px;
     margin: 5px 0px 0px 0px;
     display: flex;
@@ -1228,10 +1097,10 @@ table{
 .indexconnectmain{
     font-family: "標楷體";
     position: absolute;
-    left: calc(65% + 50px);
+    left: 70%;
     top: 50%;
     transform: translate(-50%,-50%);
-    width: 500px;
+    width: min(500px,90vw);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1288,7 +1157,7 @@ table{
 
 .indexadvantagediv{
     width: calc(100% / 4 - 10px);
-    height: 35vh;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: top;
@@ -1326,4 +1195,229 @@ table{
 
 .indexfooter{
     margin-top: 0px;
+}
+
+/* ----------------- RWD ----------------- */
+@media screen and (max-width: 1260px){
+    .navigationbar{
+        height: 75px !important;
+    }
+
+    .navigationbarrightphonebar{
+        width: 50px;
+        height: 40px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        cursor: pointer;
+        transition: 0.25s linear;
+    }
+
+    .navigationbarrightphonebarline{
+        width: 100%;
+        height: 3px;
+        background: black;
+    }
+
+    .navigationbarrightbuttonlist{
+        position: absolute;
+        right: -5px;
+        top: 55px;
+        width: 60vw;
+        height: 80vh;
+        margin: 0px 15px;
+        padding: 5px;
+        display: none;
+        background: whitesmoke;
+        z-index: 900;
+    }
+
+    .navigationbarrightbuttonlistposition{
+        height: 360px;
+        display: flex;
+        flex-wrap: wrap;
+        z-index: 900;
+    }
+
+    .navigationbarrightbuttonlistposition>.navigationbarbutton{
+        width: 95%;
+        z-index: 900;
+    }
+/*
+    .maincoverdiv{
+        overflow: hidden;
+    } */
+
+    /* .maincover{
+        min-height: 40vh;
+        width: 200% !important;
+    } */
+/*
+    .maincovertextdiv{
+        top: 20px !important;
+        left: 0px !important;
+        transform: translate(-0%, -0%) !important;
+        width: 100% !important;
+    } */
+
+    /* .maincovertext{
+        display: none;
+    } */
+
+    .productpost{
+        width: 100% !important;
+    }
+
+    .webknowledgepost{
+        width: 100% !important;
+    }
+
+    /*
+    .productpostimage{
+        max-width: initial !important;
+    } */
+
+    .productmaindiv{
+        top: 75px !important;
+    }
+
+    .webknowledgemaindiv{
+        top: 75px !important;
+    }
+
+    /* footer START */
+    .footer{
+        position: relative;
+        width: 100%;
+        height: 25vh;
+        background: whitesmoke;
+        padding: 0px 5vw;
+        margin-top: 50px;
+    }
+
+    .footertopdiv{
+        width: 100%;
+        height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .footertop{
+        position: relative;
+        width: 90vw;
+        text-align: center;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footerlogo{
+        max-height: 50px;
+    }
+
+    .footericon{
+        max-height: 25px;
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .footerbottom{
+        border-top: 1px black solid;
+        width: 100%;
+        height: 49px;
+        font-size: 15px;
+        text-align: left;
+    }
+    /* footer END */
+
+    .indexproductintroduction{
+        height: initial;
+    }
+
+    .indexproductintroductionproductdiv{
+        height: initial;
+        margin: 5px;
+        display: block;
+        /* align-items: center;
+        justify-content: center;
+        flex-wrap: wrap; */
+    }
+
+    .indexproductintroductionproduct{
+        background: white;
+        width: 100%;
+        height: initial;
+        margin: 15px 10px;
+        /* display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap; */
+    }
+
+    .indexproductintroductionproductsubtitle{
+        position: relative;
+        top: 5px;
+    }
+
+    .indexadvantage{
+        background: rgba(230, 230, 230, 0.95);
+        /* border-radius: 30px 30px 0px 0px; */
+        padding: 0px 20px 20px 20px;
+        height: initial;
+        /* margin: 20px 0px 0px 0px; */
+        /* display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap; */
+        text-align: justify;
+    }
+
+    .indexadvantagediv{
+        width: 100%;
+        height: auto;
+        margin: 10px 0px;
+        display: block;
+    }
+
+    .indexadvantagemain{
+        background: white;
+        width: 100%;
+        /* height: 350px; */
+        padding: 5px 0px;
+        margin: 5px 0px 0px 0px;
+        display: initial;
+        text-align: center;
+    }
+
+    .indexconnectmain{
+        margin-top: 30px;
+        left: 0px;
+        right: 10px;
+        transform: translate(-0%,-50%);
+    }
+
+    .indexconnecttitle{
+        font-size: 20px;
+        text-align: right !important;
+    }
+
+    .indexconnectbuttondiv{
+        margin-top: 50px;
+        width: 100%;
+        text-align: center !important;
+    }
+
+    .introductiontext{
+        width: 100vw;
+        padding: 0px 50px;
+    }
+}
+
+@media screen and (min-width: 1260px){
+    .navigationbarrightphonebar{
+        display: none;
+    }
 }
