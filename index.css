@@ -745,6 +745,7 @@ table{
     font-size: 35px;
     font-weight: bold;
     text-align: center;
+    color: white;
 }
 
 .maincoversecondary{
@@ -1100,7 +1101,7 @@ table{
     left: 70%;
     top: 50%;
     transform: translate(-50%,-50%);
-    width: min(500px,90vw);
+    width: min(500px,100vw);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1195,6 +1196,10 @@ table{
 
 .indexfooter{
     margin-top: 0px;
+}
+
+.padleft14px{
+    padding-left: 14px;
 }
 
 /* ----------------- RWD ----------------- */
@@ -1401,6 +1406,7 @@ table{
 
     .indexconnecttitle{
         font-size: 20px;
+        margin-right: 20px;
         text-align: right !important;
     }
 
@@ -1413,6 +1419,10 @@ table{
     .introductiontext{
         width: 100vw;
         padding: 0px 50px;
+    }
+
+    .maincovertitle{
+        font-size: 25px;
     }
 }
 
