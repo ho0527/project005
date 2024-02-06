@@ -86,6 +86,7 @@ InlineEditor.create(docgetid("newposteditor"),{
     }
 }).then(function(event){
     docgetid("submit").onclick=function(){
+        console.log("iin")
         if(cover&&title!=""){
             ajax("POST",ajaxurl+"/newproduct/",function(event){
                 let data=JSON.parse(event.responseText)

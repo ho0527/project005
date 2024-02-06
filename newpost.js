@@ -111,7 +111,7 @@ InlineEditor.create(docgetid("newposteditor"),{
     docgetid("submit").onclick=function(){
         if(cover&&title!=""){
             let taglist=[]
-            docgetall("#selecttag>.tag").forEach(function(event){
+            domgetall("#selecttag>.tag").forEach(function(event){
                 taglist.push(event.dataset.name)
             })
             ajax("POST",ajaxurl+"/newpost/",function(event){
