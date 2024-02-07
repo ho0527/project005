@@ -2,7 +2,7 @@ let ajaxurl="/backend/project005/"
 let html=location.href.split("project005/")[1]
 
 if(docgetid("navigationbar")){
-    if(html=="admin.html"||html=="adminproduct.html"||html=="adminwebknowledge.html"||html=="newproduct.html"||html=="newpost.html"){
+    if(html=="admin.html"||html=="adminproduct.html"||html=="adminwebknowledge.html"||html=="editproduct.html"||html=="newproduct.html"||html=="newpost.html"){
         docgetid("navigationbar").innerHTML=`
             <div class="navigationbarleft" id="title">
                 <img src="material/icon/logo.png" class="logo">

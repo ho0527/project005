@@ -1,6 +1,6 @@
 let cover
 
-InlineEditor.create(docgetid("newposteditor"),{
+ClassicEditor.create(docgetid("newposteditor"),{
     // plugins:[CKFinder],
     extraPlugins: [ MyCustomUploadAdapterPlugin ],
     // https://ckeditor.com/docs/ckeditor5/latest/features/toolbar/toolbar.html#extended-toolbar-configuration-format

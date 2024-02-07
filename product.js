@@ -1,4 +1,6 @@
 function main(){
+    docgetid("post").innerHTML=``
+
     ajax("GET",ajaxurl+"/getproductlist/"+weblsget("project005productsortby"),function(event){
         let data=JSON.parse(event.responseText)
         if(data["success"]){
@@ -9,7 +11,7 @@ function main(){
                         ${docgetid("post").innerHTML}
                         <div class="productpost grid" data-id="${row[i][0]}">
                             <div class="productpostimagediv"><img src="/backend/media/${row[i][1]}" class="productpostimage"></div>
-                            <div class="productposttitle macossectiondivy">${row[i][2]}</div>
+                            <div class="productposttitle">${row[i][2]}</div>
                         </div>
                     `
                 }

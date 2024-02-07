@@ -5,13 +5,21 @@ ajax("GET",ajaxurl+"/getproduct/"+weblsget("project005productid"),function(event
             <div class="productdetailtitle">
                 ${data["data"][2]}
             </div>
-            <img src="/backend/media/${data["data"][1]}" class="productdetailimage">
+            <img src="material/picture/postcover.png" class="productdetailimage">
         </div>
-        <div class="productdetail">
-            ${data["data"][3]}
-        </div>
+        <div class="productdetail" id="ckeditor">${data["data"][3]}</div>
     `
-    console.log(data)
+
+    // ClassicEditor.create(domgetid("ckeditor"),{
+    //     config:{
+    //     toolbar: ['bold', 'italic', 'bulletedList', '|', 'numberedList', 'alignment'],
+    //     removePlugins: ['Heading', 'Link'],
+    //     isReadOnly: true,
+    //     }
+    // }).then(function(event){
+    //     event.ui.view.toolbar.element.style.display="none"
+    //     event.enableReadOnlyMode("editor")
+    // })
 })
 
 docgetid("title").onclick=function(){

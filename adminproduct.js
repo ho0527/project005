@@ -11,20 +11,24 @@ function main(){
                         <div class="productpost grid" data-id="${row[i][0]}">
                             <div class="productpostimagediv"><img src="/backend/media/${row[i][1]}" class="productpostimage"></div>
                             <div class="productposttitle macossectiondivy">${row[i][2]}</div>
+                            <img src="/icon/bootstrap/pencil-square.svg" class="productpostedit">
                         </div>
                     `
                 }
 
-                docgetid("post").innerHTML=innerhtml
+                domgetid("post").innerHTML=innerhtml
 
-                docgetall(".productpost").forEach(function(event){
-                    event.onclick=function(){
+                onclick(".productpost",function(element,event){
+                    if(event.target.classList=="productpostedit"){
+                        weblsset("project005producteditid",element.dataset.id)
+                        location.href="editproduct.html"
+                    }else{
+                        weblsset("project005productid",element.dataset.id)
                         location.href="productdetail.html"
-                        weblsset("project005productid",event.dataset.id)
                     }
                 })
             }else{
-                docgetid("post").innerHTML=`
+                domgetid("post").innerHTML=`
                     <div class="bigerror">查無資料</div>
                 `
             }
@@ -34,7 +38,7 @@ function main(){
 
 if(!weblsget("project005productsortby")){ weblsset("project005productsortby","all") }
 
-docgetall(".productbutton").forEach(function(event){
+domgetall(".productbutton").forEach(function(event){
     if(event.dataset.id==weblsget("project005productsortby")){
         event.classList.add("productbuttonselect")
     }
@@ -42,11 +46,11 @@ docgetall(".productbutton").forEach(function(event){
 
 main()
 
-docgetall(".productbutton").forEach(function(event){
+domgetall(".productbutton").forEach(function(event){
     event.onclick=function(){
         weblsset("project005productsortby",event.dataset.id)
         main()
-        docgetall(".productbutton").forEach(function(event){
+        domgetall(".productbutton").forEach(function(event){
             if(event.dataset.id==weblsget("project005productsortby")){
                 event.classList.add("productbuttonselect")
             }else{
@@ -56,7 +60,7 @@ docgetall(".productbutton").forEach(function(event){
     }
 })
 
-docgetid("newproduct").onclick=function(){
+domgetid("newproduct").onclick=function(){
     location.href="newproduct.html"
 }
 
