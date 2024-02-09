@@ -645,8 +645,9 @@ table{
 
 .productdetailmain{
     position: relative;
-    top: 100px;
-    height: calc(100vh - 100px);
+    top: 75px;
+    width: 100vw;
+    /* height: calc(100vh - 75px); */
     text-align: center;
 }
 
@@ -691,7 +692,7 @@ table{
 /* footer START */
 .footer{
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 100px;
     background: whitesmoke;
     padding: 0px 5vw;
