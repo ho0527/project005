@@ -128,7 +128,7 @@ CKEDITOR.ClassicEditor.create(domgetid("newposteditor"),{
         }
     }
 }).then(function(event){
-    docgetid("submit").onclick=function(){
+    domgetid("submit").onclick=function(){
         if(cover&&title!=""){
             ajax("POST",ajaxurl+"/newproduct/",function(event){
                 let data=JSON.parse(event.responseText)
@@ -138,46 +138,35 @@ CKEDITOR.ClassicEditor.create(domgetid("newposteditor"),{
                 }
             },formdata([
                 ["cover",cover],
-                ["title",docgetid("producttitle").value],
+                ["title",domgetid("producttitle").value],
                 ["content",event.getData()],
-                ["tag",docgetid("select").value],
+                ["tag",domgetid("select").value],
             ]),[])
         }else{
             alert("請填寫標題及上傳封面")
         }
     }
-});
+})
 
-docgetid("file").onchange=function(){
-    let file=this.files[0]
-    cover=file
-    let reader=new FileReader()
-    reader.onload=function(event){
-        docgetid("preview").src=event.target.result
-        docgetid("preview").style.display="block"
-    }
-    reader.readAsDataURL(file)
-}
-
-docgetid("title").onclick=function(){
+domgetid("title").onclick=function(){
     location.href="index.html"
 }
 
-docgetid("uploadfile").onclick=function(){
-    docgetid("file").click()
+domgetid("uploadfile").onclick=function(){
+    domgetid("file").click()
 }
 
-docgetid("uploadfile").ondragover=function(event){
+domgetid("uploadfile").ondragover=function(event){
     event.preventDefault()
     event.stopPropagation()
 }
 
-docgetid("uploadfile").ondragleave=function(event){
+domgetid("uploadfile").ondragleave=function(event){
     event.preventDefault()
     event.stopPropagation()
 }
 
-docgetid("uploadfile").ondrop=function(event){
+domgetid("uploadfile").ondrop=function(event){
     event.preventDefault()
     event.stopPropagation()
 
@@ -188,19 +177,19 @@ docgetid("uploadfile").ondrop=function(event){
 
         let reader=new FileReader()
         reader.onload=function(event2){
-            docgetid("preview").src=event2.target.result
-            docgetid("preview").style.display="block"
+            domgetid("preview").src=event2.target.result
+            domgetid("preview").style.display="block"
         }
         reader.readAsDataURL(file)
     }
 }
 
 
-docgetid("newposteditor").ondrop=function(){
+domgetid("newposteditor").ondrop=function(){
     cover=this.files[0]
 }
 
-docgetid("signout").onclick=function(){
+domgetid("signout").onclick=function(){
     ajax("POST",ajaxurl+"/signout/",function(event){
         let data=JSON.parse(event.responseText)
         if(data["success"]){
@@ -214,5 +203,20 @@ docgetid("signout").onclick=function(){
         ["Authorization","Bearer "+weblsget("project005token")]
     ])
 }
+
+windowload(function(){
+    onchange("#file",function(element,event){
+        let file=element.files[0]
+        let reader=new FileReader()
+
+        cover=file
+
+        reader.onload=function(event){
+            domgetid("preview").src=event.target.result
+            domgetid("preview").style.display="block"
+        }
+        reader.readAsDataURL(file)
+    })
+})
 
 startmacossection()

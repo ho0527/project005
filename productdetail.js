@@ -1,5 +1,8 @@
 ajax("GET",ajaxurl+"/getproduct/"+weblsget("project005productid"),function(event){
     let data=JSON.parse(event.responseText)
+
+    innerhtml("title",`${data["data"][2]}`,false)
+
     docgetid("main").innerHTML=`
         <div class="productdetailtop">
             <div class="productdetailtitle">

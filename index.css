@@ -363,7 +363,7 @@ table{
     top: 75px;
     left: 50%;
     transform: translate(-50%, -0%);
-    height: calc(100vh - 70px);
+    height: calc(100vh - 75px);
 }
 
 .newpostfunction{
@@ -512,6 +512,7 @@ table{
     left: 50%;
     transform: translate(-50%, -0%);
     width: 80vw;
+    min-height: calc(100vh - 450px);
 }
 
 .productpostdiv{
@@ -519,6 +520,7 @@ table{
     left: 50%;
     transform: translate(-50%, -0%);
     width: 75vw;
+    min-height: calc(100vh - 500px);
     text-align: center;
     margin-top: 20px;
     display: flex;
@@ -1255,6 +1257,11 @@ table{
 figure.image>img{
     max-width: 100%;
     max-height: 100%;
+}
+
+.stickyfooter{
+    position: absolute;
+    bottom: 0px;
 }
 
 /* ----------------- RWD ----------------- */

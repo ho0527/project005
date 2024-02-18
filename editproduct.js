@@ -228,4 +228,19 @@ ajax("GET",ajaxurl+"/getproduct/"+weblsget("project005producteditid"),function(e
     }
 })
 
+windowload(function(){
+    onchange("#file",function(element,event){
+        let file=element.files[0]
+        let reader=new FileReader()
+
+        cover=file
+
+        reader.onload=function(event){
+            domgetid("preview").src=event.target.result
+            domgetid("preview").style.display="block"
+        }
+        reader.readAsDataURL(file)
+    })
+})
+
 startmacossection()
