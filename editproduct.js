@@ -79,16 +79,26 @@ ajax("GET",ajaxurl+"/getproduct/"+weblsget("project005producteditid"),function(e
         domgetid("producttitle").value=data["data"][2]
         domgetid("newposteditor").innerHTML=data["data"][3]
         domgetid("select").value=data["data"][4]
-        ClassicEditor.create(domgetid("newposteditor"),{
-            // plugins: [Image,ImageResizeEditing,ImageResizeHandles],
-            extraPlugins: [ MyCustomUploadAdapterPlugin ],
-            // https://ckeditor.com/docs/ckeditor5/latest/features/toolbar/toolbar.html#extended-toolbar-configuration-format
+        CKEDITOR.ClassicEditor.create(domgetid("newposteditor"),{
             toolbar: {
-                items: ["selectAll","undo","redo","bold","italic","blockQuote","heading","imageTextAlternative","toggleImageCaption","imageStyle:inline","imageStyle:alignLeft","imageStyle:alignRight","imageStyle:alignCenter","imageStyle:alignBlockLeft","imageStyle:alignBlockRight","imageStyle:block","imageStyle:side","imageStyle:wrapText","imageStyle:breakText","uploadImage","imageUpload","indent","outdent","link","numberedList","bulletedList","mediaEmbed","insertTable","tableColumn","tableRow","mergeTableCells"],
+                items: [
+                    "exportPDF","exportWord","|",
+                    "findAndReplace","selectAll","|",
+                    "heading","|",
+                    "bold","italic","strikethrough","underline","code","subscript","superscript","removeFormat","|",
+                    "bulletedList","numberedList","todoList","|",
+                    "outdent","indent","|",
+                    "undo","redo",
+                    "-",
+                    "fontSize","fontFamily","fontColor","fontBackgroundColor","highlight","|",
+                    "alignment","|",
+                    "link","insertImage","blockQuote","insertTable","mediaEmbed","codeBlock","htmlEmbed","|",
+                    "specialCharacters","horizontalLine","pageBreak","|",
+                    "textPartLanguage","|",
+                    "sourceEditing"
+                ],
                 shouldNotGroupWhenFull: true
             },
-            // Changing the language of the interface requires loading the language file using the <script> tag.
-            // language: "es",
             list: {
                 properties: {
                     styles: true,
@@ -96,7 +106,6 @@ ajax("GET",ajaxurl+"/getproduct/"+weblsget("project005producteditid"),function(e
                     reversed: true
                 }
             },
-            // https://ckeditor.com/docs/ckeditor5/latest/features/headings.html#configuration
             heading: {
                 options: [
                     { model: "paragraph",title: "Paragraph",class: "ck-heading_paragraph" },
@@ -108,20 +117,25 @@ ajax("GET",ajaxurl+"/getproduct/"+weblsget("project005producteditid"),function(e
                     { model: "heading6",view: "h6",title: "Heading 6",class: "ck-heading_heading6" }
                 ]
             },
-            // https://ckeditor.com/docs/ckeditor5/latest/features/editor-placeholder.html#using-the-editor-configuration
             placeholder: "請在此輸入文字!",
-            // https://ckeditor.com/docs/ckeditor5/latest/features/font.html#configuring-the-font-family-feature
             fontFamily: {
-                options: ["default","Arial,Helvetica,sans-serif","Courier New,Courier,monospace","Georgia,serif","Lucida Sans Unicode,Lucida Grande,sans-serif","Tahoma,Geneva,sans-serif","Times New Roman,Times,serif","Trebuchet MS,Helvetica,sans-serif","Verdana,Geneva,sans-serif"],
+                options: [
+                    "default",
+                    "Arial,Helvetica,sans-serif",
+                    "Courier New,Courier,monospace",
+                    "Georgia,serif",
+                    "Lucida Sans Unicode,Lucida Grande,sans-serif",
+                    "Tahoma,Geneva,sans-serif",
+                    "Times New Roman,Times,serif",
+                    "Trebuchet MS,Helvetica,sans-serif",
+                    "Verdana,Geneva,sans-serif"
+                ],
                 supportAllValues: true
             },
-            // https://ckeditor.com/docs/ckeditor5/latest/features/font.html#configuring-the-font-size-feature
             fontSize: {
-                options: [10,12,14,"default",18,20,22],
+                options: [ 10,12,14,"default",18,20,22 ],
                 supportAllValues: true
             },
-            // Be careful with the setting below. It instructs CKEditor to accept ALL HTML markup.
-            // https://ckeditor.com/docs/ckeditor5/latest/features/general-html-support.html#enabling-all-html-features
             htmlSupport: {
                 allow: [
                     {
@@ -132,12 +146,9 @@ ajax("GET",ajaxurl+"/getproduct/"+weblsget("project005producteditid"),function(e
                     }
                 ]
             },
-            // Be careful with enabling previews
-            // https://ckeditor.com/docs/ckeditor5/latest/features/html-embed.html#content-previews
             htmlEmbed: {
                 showPreviews: true
             },
-            // https://ckeditor.com/docs/ckeditor5/latest/features/link.html#custom-link-attributes-decorators
             link: {
                 decorators: {
                     addTargetToExternalLinks: true,
@@ -151,17 +162,48 @@ ajax("GET",ajaxurl+"/getproduct/"+weblsget("project005producteditid"),function(e
                     }
                 }
             },
-            // https://ckeditor.com/docs/ckeditor5/latest/features/mentions.html#configuration
             mention: {
                 feeds: [
                     {
                         marker: "@",
                         feed: [
-                            "@apple","@bears","@brownie","@cake","@cake","@candy","@canes","@chocolate","@cookie","@cotton","@cream","@cupcake","@danish","@donut","@dragée","@fruitcake","@gingerbread","@gummi","@ice","@jelly-o","@liquorice","@macaroon","@marzipan","@oat","@pie","@plum","@pudding","@sesame","@snaps","@soufflé","@sugar","@sweet","@topping","@wafer"
+                            "@apple","@bears","@brownie","@cake","@cake","@candy","@canes","@chocolate","@cookie","@cotton","@cream",
+                            "@cupcake","@danish","@donut","@dragée","@fruitcake","@gingerbread","@gummi","@ice","@jelly-o",
+                            "@liquorice","@macaroon","@marzipan","@oat","@pie","@plum","@pudding","@sesame","@snaps","@soufflé",
+                            "@sugar","@sweet","@topping","@wafer"
                         ],
                         minimumCharacters: 1
                     }
                 ]
+            },
+            removePlugins: [
+                "CKBox",
+                "CKFinder",
+                "EasyImage",
+                "RealTimeCollaborativeComments",
+                "RealTimeCollaborativeTrackChanges",
+                "RealTimeCollaborativeRevisionHistory",
+                "PresenceList",
+                "Comments",
+                "TrackChanges",
+                "TrackChangesData",
+                "RevisionHistory",
+                "Pagination",
+                "WProofreader",
+                "MathType",
+                "SlashCommand",
+                "Template",
+                "DocumentOutline",
+                "FormatPainter",
+                "TableOfContents",
+                "PasteFromOfficeEnhanced"
+            ],
+            ckfinder: {
+                uploadUrl: ajaxurl+"/uploadfile?command=QuickUpload&type=Images&responseType=json",
+
+                options: {
+                    resourceType: "Images"
+                }
             }
         }).then(function(event){
             domgetid("submit").onclick=function(){
