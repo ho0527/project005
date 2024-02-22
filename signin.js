@@ -19,6 +19,9 @@ docgetid("title").onclick=function(){
 }
 
 docgetid("signup").onclick=function(){
+    alert("暫時禁止使用!")
+    return ;
+
     ajax("POST",ajaxurl+"/signup/",function(event){
         let data=JSON.parse(event.responseText)
         if(data["success"]){
