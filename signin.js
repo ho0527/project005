@@ -38,7 +38,7 @@ docgetid("signup").onclick=function(){
 }
 
 document.onkeydown=function(event){
-    if(event.key=="Enter"&&!event.shiftKey){
+    if(event.key=="Enter"){
         docgetid("submit").click()
     }
 }
